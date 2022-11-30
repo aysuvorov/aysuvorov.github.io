@@ -3,20 +3,15 @@
   <img src="https://aysuvorov.github.io/docs/promotion/main_logo.png" />
 </p>
 
+<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+
 
 # YASP!
 
 > The site provide projects on data analysis, applied statistics and data science by  `Aleksandr Y. Suvorov`, [ORCID](https://orcid.org/0000-0002-2224-0019).
 
-- [YASP!](#yasp)
-  - [Chapters](#chapters)
-  - [Code samples and scripts](#code-samples-and-scripts)
-  - [Publications, patents and conference presentations](#publications-patents-and-conference-presentations)
-  - [Lectures](#lectures)
 
-
-
-## Chapters
+## Educational materials
 
 **Clinical trials**
 
