@@ -12,7 +12,7 @@
 **Clinical trials**
 
 - Design of experiments, Clinical Trials and Biostatistics
-- Basics of meta-analysis
+- [Basics of meta-analysis](./docs/pages/meta/index.md)
 
 **Data science**
 
