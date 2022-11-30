@@ -2,4 +2,4 @@
   <img src="https://aysuvorov.github.io/docs/promotion/main_logo.png" />
 </p>
 
-WELCOME
+# YASP!
