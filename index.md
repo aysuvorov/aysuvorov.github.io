@@ -16,11 +16,11 @@
 **Clinical trials**
 
 - Design of experiments, Clinical Trials and Biostatistics
-- [Basics of meta-analysis](./docs/pages/meta/index.md)
+- [Basics of meta-analysis](./docs/pages/meta/meta_index.md)
 
 **Data science**
 
-- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
+- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/ncm_index.md)
 
 ## [Code samples and scripts](./docs/code_samples/index.md)
 
