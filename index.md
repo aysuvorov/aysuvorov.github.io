@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/aysuvorov/aysuvorov.github.io/blob/main/docs/promotion/main_logo.png" />
+  <img src="https://raw.githubusercontent.com/aysuvorov/aysuvorov.github.io/main/docs/promotion/main_logo.png" />
 </p>
 
 WELCOME
