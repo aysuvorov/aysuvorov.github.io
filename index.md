@@ -7,3 +7,14 @@
 > The site provide projects on data analysis, applied statistics and data science by  Aleksandr Y. Suvorov, [ORCID](https://orcid.org/0000-0002-2224-0019).
 
 
+# Chapters
+
+**Clinical trials**
+
+- Design of experiments, Clinical Trials and Biostatistics
+- Basics of meta-analysis
+
+**Data science**
+
+- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
+
