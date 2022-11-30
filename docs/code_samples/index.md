@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://latex.now.sh/style.css">
+
 # Basic working templates in R and Python code:
 
 ## R
