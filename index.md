@@ -3,7 +3,6 @@
   <img src="https://aysuvorov.github.io/docs/promotion/main_logo.png" />
 </p>
 
-<-- <link rel="stylesheet" href="https://latex.now.sh/style.min.css" /> -->
 
 # YASP!
 
