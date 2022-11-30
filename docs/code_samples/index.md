@@ -1,4 +1,7 @@
-<link rel="stylesheet" href="https://latex.now.sh/style.css">
+
+
+<!-- <link rel="stylesheet" href="https://latex.now.sh/style.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="latex.css"> -->
 
 # Basic working templates in R and Python code:
 
