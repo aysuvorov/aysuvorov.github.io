@@ -39,6 +39,10 @@ https://www.youtube.com/watch?v=J86Pm62XM_Q -->
 https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.full.pdf
 Коды Демичесва: https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.supplementary-material -->
 
+<p align="center">
+  <img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" />
+</p>
+
 ## Dynamic and thermodynamic models of adaptation
 
 ## Abstract
