@@ -153,7 +153,11 @@ https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.full.pdf
 
 <!-- Инструкции по KDE здесь https://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=downloadSuppFile&path%5B%5D=25216&path%5B%5D=31730 [@Whitwell2018Apr] -->
 
-1. gbgbf
+1. Снова выделяются экспериментальные единицы, которые являются контрольной группой или группой "нормальных" единиц. Также выделяются попарные комбинации характеристик, однако уже с целью построения two dimensional kernel density estimation.
+ 
+3. Для каждой комбинации характеристик ($x$, $y$) определяется two dimensional kernel density matrix, такая матрица является квадратной. Количество строк и столбцов матрицы минимально определяется длиной векторов $x$ и $y$, при этом может быть увеличено. (Почему?)  
+  
+1. Далее 
 
 
 ## Methods
