@@ -5,6 +5,8 @@ csl: jama.csl
 output: word_document
 ---
 
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
