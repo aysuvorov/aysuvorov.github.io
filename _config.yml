@@ -1,7 +1,6 @@
 
 title: "YASP!"
-# description: A dedicated site about applied statistics, design of experiments and data science
-
+subtitle: "YET ANOTHER SCIENCE PROJECT"
 author: Suvorov Aleksandr
 
 remote_theme: pages-themes/slate@v0.2.0
