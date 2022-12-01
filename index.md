@@ -3,8 +3,6 @@
   <img src="https://aysuvorov.github.io/docs/promotion/main_logo.png" />
 </p>
 
-<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
-
 
 **The site provide projects on data analysis, applied statistics and data science by  `Aleksandr Y. Suvorov`, [ORCID](https://orcid.org/0000-0002-2224-0019).**
 
@@ -14,11 +12,11 @@
 **Clinical trials**
 
 - Design of experiments, Clinical Trials and Biostatistics
-- [Basics of meta-analysis](./docs/pages/meta/meta_index.md)
+- [Basics of meta-analysis](./docs/pages/meta/index.md)
 
 **Data science**
 
-- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/ncm_index.md)
+- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
 
 ## [Code samples and scripts](./docs/code_samples/index.md)
 
