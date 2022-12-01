@@ -11,27 +11,30 @@ df = cbind.data.frame(x,y)
 
 dens = kde2d(x, y)
 
+image(dens) 
+contour(dens, add=T)
+
 gr <- data.frame(with(dens, expand.grid(x,y)), as.vector(dens$z))
 names(gr) <- c("xgr", "ygr", "zgr")
 mod <- loess(zgr~xgr*ygr, data=gr)
+
+summary(mod)
+
 df$pointdens <- predict(mod, newdata=data.frame(xgr=df[,1], ygr=df[,2]))
 print(df$pointdens)
+sum(df$pointdens)
+
 gr$preds <- predict(mod, newdata=data.frame(xgr=gr[,1], ygr=gr[,2]))
 print(gr$preds)
-sum(df$pointdens)
 sum(gr$preds)
+
 df$pointdens <- df$pointdens/sum(gr$preds)
+
 gr$preds <- gr$preds/sum(gr$preds)
 
 center <- subset(gr, gr$preds == max(gr$preds,na.rm=T))
 
-min(gr$zgr,na.rm=T)
 
-j <- order(gr$xgr)
-lines(gr$xgr[j],mod$fitted[j],col="red",lwd=3)
-
-image(dens) 
-contour(dens, add=T)
 
 
 
