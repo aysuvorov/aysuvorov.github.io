@@ -171,7 +171,7 @@ https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.full.pdf
 
 
 
-![](./images/2-rbf-boundary.png)
+![Picture 2](./images/2-rbf-boundary.png)
 
 
 
