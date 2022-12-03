@@ -1,0 +1,409 @@
+<!DOCTYPE html><html><head>
+      <title>cv_raw</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/guest/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.5/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <link rel="stylesheet" href="https://latex.now.sh/style.min.css">
+<h1 class="mume-header" id="suvorov-aleksandr-yurievich">Suvorov Aleksandr Yurievich</h1>
+
+<img src="https://raw.githubusercontent.com/aysuvorov/aysuvorov.github.io/main/docs/promotion/cv/images/ays.jpg" align="right" width="200" height="200">
+<h3 class="mume-header" id="general-information-and-link">General information and link</h3>
+
+<p><strong>Date of birth</strong>: September 7, 1986 (35 years)</p>
+<p><strong>Phone / whats app</strong>: +7 (916) 264-13-70<br>
+<strong>E-mail</strong>: <a href="mailto:yourmedstat@gmail.com">yourmedstat@gmail.com</a><br>
+<strong>Web site with code samples (R / Python)</strong>: <a href="https://aysuvorov.github.io/">https://aysuvorov.github.io/</a></p>
+<p><strong>Telegram</strong>: <a href="https://t.me/clinical_biostats">https://t.me/clinical_biostats</a> (<a href="https://t.me/clinical_biostats">@clinical_biostats</a>)<br>
+<strong>Github</strong>: <a href="https://github.com/aysuvorov/">https://github.com/aysuvorov/</a><br>
+<strong>Facebook</strong>: <a href="https://www.facebook.com/yourmedstat">https://www.facebook.com/yourmedstat</a></p>
+<p><strong>ORCID profile</strong>: <a href="https://orcid.org/0000-0002-2224-0019">0000-0002-2224-0019</a><br>
+<strong>SCOPUS profile</strong>: <a href="https://www.scopus.com/authid/detail.uri?authorId=57213827983">57213827983</a><br>
+<strong><a href="https://scholar.google.com/citations?user=3QETpFwAAAAJ&amp;hl=en">Google Scholar profile</a></strong></p>
+<h3 class="mume-header" id="desired-position">Desired position</h3>
+
+<p>Associate professor / Assistant professor / Lecturer / Researcher / Data engineer / Data scientist</p>
+<h3 class="mume-header" id="education">Education</h3>
+
+<ul>
+<li>Medical doctor (2003-2009) - I.M. Sechenov First Moscow State Medical University</li>
+<li>PhD (2012-2015) - FBSI National Research Center for Therapy and Preventive Medicine Ministry of Health of the Russian Federation</li>
+<li>Data science with R track - DataCamp (2019)</li>
+<li>Data analyst with R track - DataCamp (2019)</li>
+<li>Network analysis with Python - DataCamp</li>
+</ul>
+<h3 class="mume-header" id="work-experience-and-responsibilities">Work experience and responsibilities</h3>
+
+<ul>
+<li><strong>Senior statistician</strong> (Apr 2021 - present) Sechenov University, Institute of Biodesign and Complex Systems Modeling</li>
+<li><strong>Biostatistician</strong> (Apr 2020 - Sep 2022) - Feron LLC, pharmaceutical company, Moscow</li>
+<li><strong>Biostatistician</strong> (Oct 2015 - Mar 2016) - Nadim CRO, pharmaceutical company</li>
+<li><strong>Researcher</strong> (Jan 2012 - Mar 2016) - FBSI National Research Center for Therapy and Preventive Medicine Ministry of Health of Russian Federation</li>
+</ul>
+<h3 class="mume-header" id="competencies-and-skills">Competencies and skills</h3>
+
+<p>Programming skills</p>
+<ul>
+<li>Python, R, SPSS</li>
+</ul>
+<p>GitHub repository with code samples</p>
+<ul>
+<li><a href="https://aysuvorov.github.io/">https://aysuvorov.github.io/</a> - <strong>Code samples and scripts</strong> section</li>
+</ul>
+<h4 class="mume-header" id="design-of-experiments-biostatistics">Design of experiments / biostatistics</h4>
+
+<ul>
+<li>Trial design consulting;</li>
+<li>Sample size for various designs (pilot, RCT (superiority, noninferiority, multiarm, etc), nonRCT comparative, observational, registries), design simulations, bioequivalence, survival);</li>
+<li>Basic hypothesis testing and various statistical modelling (linear, nonlinear, repeated measures, mixed models, factor analysis,<br>
+robust regressions, etc);</li>
+<li>Bootstrap and resampling techniques;</li>
+<li>Survival analysis (Cox, Weibull models, Kaplan&#x2013;Meier estimator);</li>
+<li>Time series and time series modeling (ARMA, ARIMA, SARIMAX, etc);</li>
+<li>Various strategies for missing data;</li>
+<li>Meta analysis and Network metaanalysis;</li>
+</ul>
+<h4 class="mume-header" id="machine-learning">Machine learning</h4>
+
+<ul>
+<li>Data engineering (cleaning, preprocessing, transformations (scaling, power, Box-Cox, Min-Max, etc), various encoding strategies, etc);</li>
+<li>Dimensionality reduction (PCA, TSNE, NNMF, factor analysis, etc);</li>
+<li>Unsupervised learning (clustering)</li>
+<li>Supervised learning (linear models, discriminant analysis, Stochastic Gradient Descent, KNN, decision trees, random forest, bagging, gradient boosting methods, support vector machines, robust regressions, LASSO, LARS, elastic-net, etc);</li>
+<li>Model selection and validation (cross validation, feature selection, various hyperparameter search algorithms, calibration);</li>
+<li>Pipelines and calibration;</li>
+<li>Survival prognostic modeling;</li>
+<li>Time series prognostic modeling (sktime, Prophet, etc)</li>
+<li>Neural networks (mainly PyTorch);</li>
+</ul>
+<h4 class="mume-header" id="network-analysis">Network analysis</h4>
+
+<ul>
+<li>Basic graph algorithms;</li>
+<li>Parenclitic, synolitic, correlation networks;</li>
+<li>Prognostic network modeling;</li>
+</ul>
+<h3 class="mume-header" id="key-publications-2019-till-present">Key publications 2019 - till present</h3>
+
+<blockquote>
+<p>Full list (60+ publications): <a href="https://disk.yandex.ru/d/wUqBQq4EbCQRVw">https://disk.yandex.ru/d/wUqBQq4EbCQRVw</a></p>
+</blockquote>
+<p><strong>2022</strong></p>
+<ul>
+<li>
+<p>Morozov A., Bazarkin A., Babaevskaya D., Taratkin M., Kozlov V., <strong>Suvorov A.</strong>, Spivak L., McFarland J., Russo GI, Enikeev D. A systematic review and meta-analysis of placebo effect in clinical trials on chronic prostatitis/chronic pelvic pain syndrome. The Prostate. 2022; 1- 24. <a href="https://doi.org/10.1002/pros.24311">https://doi.org/10.1002/pros.24311</a></p>
+</li>
+<li>
+<p>Bestavashvili, A.; Glazachev, O.; Bestavashvili, A.; <strong>Suvorov, A.</strong>; Zhang, Y.; Zhang, X.; Rozhkov, A.; Kuznetsova, N.; Pavlov, C.; Glushenkov, D.; Kopylov, P. Intermittent Hypoxic-Hyperoxic Exposures Effects in Patients with Metabolic Syndrome: Correction of Cardiovascular and Metabolic Profile. Biomedicines 2022, 10, 566. <a href="https://doi.org/10.3390/biomedicines10030566">https://doi.org/10.3390/biomedicines10030566</a></p>
+</li>
+<li>
+<p>Sushentsev, N., Rundo, L., Blyuss, O., Nazarenko, T., <strong>Suvorov, A.</strong>, Gnanapragasam, V. J., Sala, E., &amp; Barrett, T. (2022). Comparative performance of MRI-derived PRECISE scores and delta-radiomics models for the prediction of prostate cancer progression in patients on active surveillance. European radiology, 32(1), 680&#x2013;689. <a href="https://doi.org/10.1007/s00330-021-08151-x">https://doi.org/10.1007/s00330-021-08151-x</a></p>
+</li>
+</ul>
+<p><strong>2021</strong></p>
+<ul>
+<li>
+<p>Pogosova, N., Yufereva, Y., Sokolova, O., Yusubova, A., <strong>Suvorov, A.</strong>, &amp; Saner, H. (2021). Telemedicine Intervention to Improve Long-Term Risk Factor Control and Body Composition in Persons with High Cardiovascular Risk: Results from a Randomized Trial. Global Heart, 16(1), 21. DOI: <a href="http://doi.org/10.5334/gh.825">http://doi.org/10.5334/gh.825</a></p>
+</li>
+<li>
+<p>Sagirova, Z.; Kuznetsova, N.; Gogiberidze, N.; Gognieva, D.; <strong>Suvorov, A.</strong>; Chomakhidze, P.; Omboni, S.; Saner, H.; Kopylov, P. Cuffless Blood Pressure Measurement Using a Smartphone-Case Based ECG Monitor with Photoplethysmography in Hypertensive Patients. Sensors 2021, 21, 3525. <a href="https://doi.org/10.3390/s21103525">https://doi.org/10.3390/s21103525</a></p>
+</li>
+<li>
+<p>Afina A. Bestavashvili, Oleg S. Glazachev, Alexander A. Bestavashvili, Ines Dhif, <strong>Alexander Yu Suvorov</strong>, Nikita V. Vorontsov, Denis S. Tuter, Daria G. Gognieva, Zhang Yong, Chavdar S. Pavlov, Dmitriy V. Glushenkov, Elena A. Sirkina, Irina V. Kaloshina, Philippe Yu Kopylov. The Effects of Intermittent Hypoxic&#x2013;Hyperoxic Exposures on Lipid Profile and Inflammation in Patients With Metabolic Syndrome. Frontiers in Cardiovascular Medicine. 2021, 8, <a href="https://doi.org/10.3389/fcvm.2021.700826">https://doi.org/10.3389/fcvm.2021.700826</a></p>
+</li>
+</ul>
+<p><strong>2020</strong></p>
+<ul>
+<li>
+<p><em>ESC Congress 2020</em>. Safety and efficacy of rivaroxaban compared to warfarin in patients with atrial fibrillation and advanced stages of chronic kidney disease. ID 87798. E-poster session. M.Chashkina, D.Andreev, N.Kozlovsaya, Z.Salpagarova, A.Bykova, <strong>A.Suvorov</strong> et al.</p>
+</li>
+<li>
+<p>E Karev, S Verbilo, E Malev, M Prokudina, <strong>A Suvorov</strong>, Global longitudinal strain and left ventricle dyssynchrony changes during stress echocardiography in response to antihypertensive treatment optimization, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.206, <a href="https://doi.org/10.1093/ehjci/jeaa356.206">https://doi.org/10.1093/ehjci/jeaa356.206</a></p>
+</li>
+<li>
+<p>E Karev, S Verbilo, E Malev, M Prokudina, <strong>A Suvorov</strong>, The influence of afterload on left ventricular contractility: 2D-strain and dyssynchrony in stress echocardiography, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.192,<br>
+<a href="https://doi.org/10.1093/ehjci/jeaa356.192">https://doi.org/10.1093/ehjci/jeaa356.192</a></p>
+</li>
+</ul>
+<p><strong>2019</strong></p>
+<ul>
+<li>
+<p><em>EuroEcho Congress 2019</em>. &#x201C;Non-invasive risk assessment of the left atrial appendage thrombosis using deep learning<br>
+methods&#x201D;. (Suvorov A.Y., Melik - Ogandzhanyan G.Yu., Dmitrieva E.V., Voskresenskaya N.V., Kruglov A.A.). Abs.<br>
+90310., Rapid Fire Session.</p>
+</li>
+<li>
+<p><em>Acute Cardiovascular Care Congress 2020</em>. Predicting short-term outcomes in patients with acute coronary syndrome using a variety of artificial intelligence models in real clinical practice. E-poster presentation.</p>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
