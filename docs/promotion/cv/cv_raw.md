@@ -1,5 +1,6 @@
-
-<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+---
+css: "https://latex.now.sh/style.min.css"
+---
 
 # Suvorov Aleksandr Yurievich
 
