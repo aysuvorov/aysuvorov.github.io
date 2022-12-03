@@ -13,7 +13,7 @@ output:
 
 ### General information and link
 
-**Date of birth**: September 7, 1986 (35 years)
+**Date of birth**: Sep 7, 1986
 
 **Phone / whats app**: +7 (916) 264-13-70
 **E-mail**: yourmedstat@gmail.com
