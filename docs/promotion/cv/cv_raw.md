@@ -11,15 +11,21 @@ css: "https://latex.now.sh/style.min.css"
 **Date of birth**: Sep 7, 1986
 
 **Phone / whats app**: +7 (916) 264-13-70
+
 **E-mail**: yourmedstat@gmail.com
+
 **Web site with code samples (R / Python)**: https://aysuvorov.github.io/
 
 **Telegram**: https://t.me/clinical_biostats ([@clinical_biostats](https://t.me/clinical_biostats))
+
 **Github**: https://github.com/aysuvorov/
+
 **Facebook**: https://www.facebook.com/yourmedstat
 
 **ORCID profile**: [0000-0002-2224-0019](https://orcid.org/0000-0002-2224-0019)
+
 **SCOPUS profile**: [57213827983](https://www.scopus.com/authid/detail.uri?authorId=57213827983)
+
 **[Google Scholar profile](https://scholar.google.com/citations?user=3QETpFwAAAAJ&hl=en)**
 
 ### Desired position
@@ -27,6 +33,7 @@ css: "https://latex.now.sh/style.min.css"
 Associate professor / Assistant professor / Lecturer / Researcher / Data engineer / Data scientist
 
 ### Education
+
 - Medical doctor (2003-2009) - I.M. Sechenov First Moscow State Medical University
 - PhD (2012-2015) - FBSI National Research Center for Therapy and Preventive Medicine Ministry of Health of the Russian Federation
 - Data science with R track - DataCamp (2019)
@@ -42,14 +49,18 @@ Associate professor / Assistant professor / Lecturer / Researcher / Data enginee
 
 
 ### Competencies and skills
+
 Programming skills
+
 - Python, R, SPSS
 
 GitHub repository with code samples
+
 - https://aysuvorov.github.io/ - **Code samples and scripts** section
 
 
 #### Design of experiments / biostatistics
+
 - Trial design consulting;
 - Sample size for various designs (pilot, RCT (superiority, noninferiority, multiarm, etc), nonRCT comparative, observational, registries), design simulations, bioequivalence, survival);
 - Basic hypothesis testing and various statistical modelling (linear, nonlinear, repeated measures, mixed models, factor analysis,
@@ -61,6 +72,7 @@ robust regressions, etc);
 - Meta analysis and Network metaanalysis;
 
 #### Machine learning
+
 - Data engineering (cleaning, preprocessing, transformations (scaling, power, Box-Cox, Min-Max, etc), various encoding strategies, etc);
 - Dimensionality reduction (PCA, TSNE, NNMF, factor analysis, etc);
 - Unsupervised learning (clustering)
@@ -72,6 +84,7 @@ robust regressions, etc);
 - Neural networks (mainly PyTorch);
   
 #### Network analysis
+
 - Basic graph algorithms;
 - Parenclitic, synolitic, correlation networks;
 - Prognostic network modeling;
@@ -98,6 +111,7 @@ robust regressions, etc);
 - Afina A. Bestavashvili, Oleg S. Glazachev, Alexander A. Bestavashvili, Ines Dhif, **Alexander Yu Suvorov**, Nikita V. Vorontsov, Denis S. Tuter, Daria G. Gognieva, Zhang Yong, Chavdar S. Pavlov, Dmitriy V. Glushenkov, Elena A. Sirkina, Irina V. Kaloshina, Philippe Yu Kopylov. The Effects of Intermittent Hypoxic–Hyperoxic Exposures on Lipid Profile and Inflammation in Patients With Metabolic Syndrome. Frontiers in Cardiovascular Medicine. 2021, 8, https://doi.org/10.3389/fcvm.2021.700826 
 
 **2020**
+
 - *ESC Congress 2020*. Safety and efficacy of rivaroxaban compared to warfarin in patients with atrial fibrillation and advanced stages of chronic kidney disease. ID 87798. E-poster session. M.Chashkina, D.Andreev, N.Kozlovsaya, Z.Salpagarova, A.Bykova, **A.Suvorov** et al.
   
 - E Karev, S Verbilo, E Malev, M Prokudina, **A Suvorov**, Global longitudinal strain and left ventricle dyssynchrony changes during stress echocardiography in response to antihypertensive treatment optimization, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.206, https://doi.org/10.1093/ehjci/jeaa356.206
@@ -113,5 +127,3 @@ methods”. (Suvorov A.Y., Melik - Ogandzhanyan G.Yu., Dmitrieva E.V., Voskresen
 90310., Rapid Fire Session.
 
 - *Acute Cardiovascular Care Congress 2020*. Predicting short-term outcomes in patients with acute coronary syndrome using a variety of artificial intelligence models in real clinical practice. E-poster presentation.
-
-
