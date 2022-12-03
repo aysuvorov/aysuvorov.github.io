@@ -16,7 +16,7 @@ css: "https://latex.now.sh/style.min.css"
 
 **Web site with code samples (R / Python)**: [https://aysuvorov.github.io/](https://aysuvorov.github.io/)
 
-**Telegram**: [https://t.me/clinical_biostats](https://t.me/clinical_biostats) ([@clinical_biostats](https://t.me/clinical_biostats))
+**Telegram**: [https://t.me/clinical_biostats](https://t.me/clinical_biostats)
 
 **Github**: [https://github.com/aysuvorov/](https://github.com/aysuvorov/)
 
@@ -69,7 +69,7 @@ robust regressions, etc);
 - Survival analysis (Cox, Weibull models, Kaplan–Meier estimator);
 - Time series and time series modeling (ARMA, ARIMA, SARIMAX, etc);
 - Various strategies for missing data;
-- Meta analysis and Network metaanalysis;
+- Meta-analysis and Network meta-analysis;
 
 #### Machine learning
 
