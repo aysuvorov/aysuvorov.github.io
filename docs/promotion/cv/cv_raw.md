@@ -88,36 +88,37 @@ robust regressions, etc);
 - Basic graph algorithms;
 - Parenclitic, synolitic, correlation networks;
 - Prognostic network modeling;
+- Graph Neural Networks (GNN);
 
 
 ### Key publications 2019 - till present
 
-> Full list (60+ publications): https://disk.yandex.ru/i/xbvaaar_ITkdzQ
+> Full list (60+ publications): [https://disk.yandex.ru/i/xbvaaar_ITkdzQ](https://disk.yandex.ru/i/xbvaaar_ITkdzQ)
 
 **2022**
 
-- Morozov A., Bazarkin A., Babaevskaya D., Taratkin M., Kozlov V., **Suvorov A.**, Spivak L., McFarland J., Russo GI, Enikeev D. A systematic review and meta-analysis of placebo effect in clinical trials on chronic prostatitis/chronic pelvic pain syndrome. The Prostate. 2022; 1- 24. https://doi.org/10.1002/pros.24311
+- Morozov A., Bazarkin A., Babaevskaya D., Taratkin M., Kozlov V., **Suvorov A.**, Spivak L., McFarland J., Russo GI, Enikeev D. A systematic review and meta-analysis of placebo effect in clinical trials on chronic prostatitis/chronic pelvic pain syndrome. The Prostate. 2022; 1- 24. [https://doi.org/10.1002/pros.24311](https://doi.org/10.1002/pros.24311)
   
-- Bestavashvili, A.; Glazachev, O.; Bestavashvili, A.; **Suvorov, A.**; Zhang, Y.; Zhang, X.; Rozhkov, A.; Kuznetsova, N.; Pavlov, C.; Glushenkov, D.; Kopylov, P. Intermittent Hypoxic-Hyperoxic Exposures Effects in Patients with Metabolic Syndrome: Correction of Cardiovascular and Metabolic Profile. Biomedicines 2022, 10, 566. https://doi.org/10.3390/biomedicines10030566
+- Bestavashvili, A.; Glazachev, O.; Bestavashvili, A.; **Suvorov, A.**; Zhang, Y.; Zhang, X.; Rozhkov, A.; Kuznetsova, N.; Pavlov, C.; Glushenkov, D.; Kopylov, P. Intermittent Hypoxic-Hyperoxic Exposures Effects in Patients with Metabolic Syndrome: Correction of Cardiovascular and Metabolic Profile. Biomedicines 2022, 10, 566. [https://doi.org/10.3390/biomedicines10030566](https://doi.org/10.3390/biomedicines10030566)
 
-- Sushentsev, N., Rundo, L., Blyuss, O., Nazarenko, T., **Suvorov, A.**, Gnanapragasam, V. J., Sala, E., & Barrett, T. (2022). Comparative performance of MRI-derived PRECISE scores and delta-radiomics models for the prediction of prostate cancer progression in patients on active surveillance. European radiology, 32(1), 680–689. https://doi.org/10.1007/s00330-021-08151-x
+- Sushentsev, N., Rundo, L., Blyuss, O., Nazarenko, T., **Suvorov, A.**, Gnanapragasam, V. J., Sala, E., & Barrett, T. (2022). Comparative performance of MRI-derived PRECISE scores and delta-radiomics models for the prediction of prostate cancer progression in patients on active surveillance. European radiology, 32(1), 680–689. [https://doi.org/10.1007/s00330-021-08151-x](https://doi.org/10.1007/s00330-021-08151-x)
 
 **2021**
 
-- Pogosova, N., Yufereva, Y., Sokolova, O., Yusubova, A., **Suvorov, A.**, & Saner, H. (2021). Telemedicine Intervention to Improve Long-Term Risk Factor Control and Body Composition in Persons with High Cardiovascular Risk: Results from a Randomized Trial. Global Heart, 16(1), 21. DOI: http://doi.org/10.5334/gh.825
+- Pogosova, N., Yufereva, Y., Sokolova, O., Yusubova, A., **Suvorov, A.**, & Saner, H. (2021). Telemedicine Intervention to Improve Long-Term Risk Factor Control and Body Composition in Persons with High Cardiovascular Risk: Results from a Randomized Trial. Global Heart, 16(1), 21. DOI: [http://doi.org/10.5334/gh.825](http://doi.org/10.5334/gh.825)
 
-- Sagirova, Z.; Kuznetsova, N.; Gogiberidze, N.; Gognieva, D.; **Suvorov, A.**; Chomakhidze, P.; Omboni, S.; Saner, H.; Kopylov, P. Cuffless Blood Pressure Measurement Using a Smartphone-Case Based ECG Monitor with Photoplethysmography in Hypertensive Patients. Sensors 2021, 21, 3525. https://doi.org/10.3390/s21103525
+- Sagirova, Z.; Kuznetsova, N.; Gogiberidze, N.; Gognieva, D.; **Suvorov, A.**; Chomakhidze, P.; Omboni, S.; Saner, H.; Kopylov, P. Cuffless Blood Pressure Measurement Using a Smartphone-Case Based ECG Monitor with Photoplethysmography in Hypertensive Patients. Sensors 2021, 21, 3525. [https://doi.org/10.3390/s21103525](https://doi.org/10.3390/s21103525)
 
-- Afina A. Bestavashvili, Oleg S. Glazachev, Alexander A. Bestavashvili, Ines Dhif, **Alexander Yu Suvorov**, Nikita V. Vorontsov, Denis S. Tuter, Daria G. Gognieva, Zhang Yong, Chavdar S. Pavlov, Dmitriy V. Glushenkov, Elena A. Sirkina, Irina V. Kaloshina, Philippe Yu Kopylov. The Effects of Intermittent Hypoxic–Hyperoxic Exposures on Lipid Profile and Inflammation in Patients With Metabolic Syndrome. Frontiers in Cardiovascular Medicine. 2021, 8, https://doi.org/10.3389/fcvm.2021.700826 
+- Afina A. Bestavashvili, Oleg S. Glazachev, Alexander A. Bestavashvili, Ines Dhif, **Alexander Yu Suvorov**, Nikita V. Vorontsov, Denis S. Tuter, Daria G. Gognieva, Zhang Yong, Chavdar S. Pavlov, Dmitriy V. Glushenkov, Elena A. Sirkina, Irina V. Kaloshina, Philippe Yu Kopylov. The Effects of Intermittent Hypoxic–Hyperoxic Exposures on Lipid Profile and Inflammation in Patients With Metabolic Syndrome. Frontiers in Cardiovascular Medicine. 2021, 8, [https://doi.org/10.3389/fcvm.2021.700826](https://doi.org/10.3389/fcvm.2021.700826)
 
 **2020**
 
 - *ESC Congress 2020*. Safety and efficacy of rivaroxaban compared to warfarin in patients with atrial fibrillation and advanced stages of chronic kidney disease. ID 87798. E-poster session. M.Chashkina, D.Andreev, N.Kozlovsaya, Z.Salpagarova, A.Bykova, **A.Suvorov** et al.
   
-- E Karev, S Verbilo, E Malev, M Prokudina, **A Suvorov**, Global longitudinal strain and left ventricle dyssynchrony changes during stress echocardiography in response to antihypertensive treatment optimization, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.206, https://doi.org/10.1093/ehjci/jeaa356.206
+- E Karev, S Verbilo, E Malev, M Prokudina, **A Suvorov**, Global longitudinal strain and left ventricle dyssynchrony changes during stress echocardiography in response to antihypertensive treatment optimization, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.206, [https://doi.org/10.1093/ehjci/jeaa356.206](https://doi.org/10.1093/ehjci/jeaa356.206)
   
 - E Karev, S Verbilo, E Malev, M Prokudina, **A Suvorov**, The influence of afterload on left ventricular contractility: 2D-strain and dyssynchrony in stress echocardiography, European Heart Journal - Cardiovascular Imaging, Volume 22, Issue Supplement_1, January 2021, jeaa356.192,
-https://doi.org/10.1093/ehjci/jeaa356.192
+[https://doi.org/10.1093/ehjci/jeaa356.192](https://doi.org/10.1093/ehjci/jeaa356.192)
 
 
 **2019**
