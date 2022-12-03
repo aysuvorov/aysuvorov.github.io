@@ -12,15 +12,15 @@ css: "https://latex.now.sh/style.min.css"
 
 **Phone / whats app**: +7 (916) 264-13-70
 
-**E-mail**: yourmedstat@gmail.com
+**E-mail**: [yourmedstat@gmail.com](yourmedstat@gmail.com)
 
-**Web site with code samples (R / Python)**: https://aysuvorov.github.io/
+**Web site with code samples (R / Python)**: [https://aysuvorov.github.io/](https://aysuvorov.github.io/)
 
-**Telegram**: https://t.me/clinical_biostats ([@clinical_biostats](https://t.me/clinical_biostats))
+**Telegram**: [https://t.me/clinical_biostats](https://t.me/clinical_biostats) ([@clinical_biostats](https://t.me/clinical_biostats))
 
-**Github**: https://github.com/aysuvorov/
+**Github**: [https://github.com/aysuvorov/](https://github.com/aysuvorov/)
 
-**Facebook**: https://www.facebook.com/yourmedstat
+**Facebook**: [https://www.facebook.com/yourmedstat](https://www.facebook.com/yourmedstat)
 
 **ORCID profile**: [0000-0002-2224-0019](https://orcid.org/0000-0002-2224-0019)
 
@@ -56,7 +56,7 @@ Programming skills
 
 GitHub repository with code samples
 
-- https://aysuvorov.github.io/ - **Code samples and scripts** section
+- [https://aysuvorov.github.io/](https://aysuvorov.github.io/) - **Code samples and scripts** section
 
 
 #### Design of experiments / biostatistics
