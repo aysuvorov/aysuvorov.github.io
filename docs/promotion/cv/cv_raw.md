@@ -1,9 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
-  word_document: default
----
 
 <link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
 
@@ -84,7 +78,7 @@ robust regressions, etc);
 
 ### Key publications 2019 - till present
 
-> Full list (60+ publications): https://disk.yandex.ru/d/wUqBQq4EbCQRVw
+> Full list (60+ publications): https://disk.yandex.ru/i/xbvaaar_ITkdzQ
 
 **2022**
 
