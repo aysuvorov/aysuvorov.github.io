@@ -1,7 +1,7 @@
 # Understanding ROC - analysis
 
 <p align="center">
-  <img src="https://i.pinimg.com/564x/a0/26/99/a026998720b34ef0990be92fb15b965f.jpg" />
+  <img src="https://i.pinimg.com/564x/d3/48/41/d348411781b7c7af9ddbaacc8eb8e9ae.jpg" />
 </p>
 
 - [Understanding ROC - analysis](#understanding-roc---analysis)

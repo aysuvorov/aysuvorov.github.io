@@ -1,7 +1,7 @@
 # Hypothesis testing concepts
 
 <p align="center">
-  <img src="https://i.pinimg.com/564x/8b/ec/3e/8bec3e83a7c6e81145cae29765afb249.jpg" />
+  <img src="https://i.pinimg.com/564x/77/d9/7e/77d97e5da879a650667265e1bc552c32.jpg" />
 </p>
 
 - [Hypothesis testing concepts](#hypothesis-testing-concepts)
