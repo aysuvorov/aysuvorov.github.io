@@ -25,11 +25,17 @@
 **Clinical trials**
 
 - Design of experiments, Clinical Trials and Biostatistics
-- [Basics of meta-analysis](./docs/pages/meta/index.md)
+  - [Hypothesis testing concepts](./docs/pages/doe/hyp_test/index.md)
+- Meta-analysis
+  - [Basics of meta-analysis](./docs/pages/meta/index.md)
 
 **Data science**
 
 - [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
+
+**Miscellaneous**
+
+- [Understanding ROC - analysis](./docs/pages/misc/roc_anal/index.md)
 
 ## Code samples and scripts
 
