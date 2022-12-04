@@ -183,8 +183,8 @@ The risk score is interpreted as potentially "low", "moderate", "high" and "very
 This tool allows you to critically approach the results obtained in the meta-analysis and consider studies with a high risk of bias as less reliable.
 
 A detailed description of the capabilities of this tool is available at https://www.riskofbias.info/.
-<!-- 
-## Размер эффекта в мета-анализе
+
+<!-- ## Размер эффекта в мета-анализе
 
 Исследования, объединенные в мета-анализе обычно оценивают результаты по идентичной конечной точке. Данная оценка есть эффект, который был достигнут, или *наблюдаемый эффект*. Эффект традиционно обозначается греческой буквой "тета" $\theta$, наблюдаемый эффект по каждому из *k* исследований обычно обозначается, как $\theta_k$. Мы уже касались понятия эффекта и его оценки, размера эффекта, в публикации о тестировании статистических гипотез [^stat_test].
 
