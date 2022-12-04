@@ -22,14 +22,14 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
-# Introduction to meta-analysis
+# Basics of meta-analysis
 
 <p align="center">
   <img src="https://i.pinimg.com/564x/3b/1a/ce/3b1ace5f8c5f8f1574bc6298a4018ec8.jpg" />
 </p>
 
-- [Introduction to meta-analysis](#introduction-to-meta-analysis)
-  - [What are meta-analysis?](#what-are-meta-analysis)
+- [Basics of meta-analysis](#basics-of-meta-analysis)
+  - [What is meta-analysis?](#what-is-meta-analysis)
   - [Inclusion of studies in meta-analysis and methodological framework](#inclusion-of-studies-in-meta-analysis-and-methodological-framework)
     - [PRISMA guidelines](#prisma-guidelines)
   - [Estimation of possible biases in publications](#estimation-of-possible-biases-in-publications)
@@ -48,7 +48,7 @@ MathJax = {
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## What are meta-analysis?
+## What is meta-analysis?
 
 <!-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3049418/  -->
 
@@ -513,8 +513,8 @@ $$
 H^2 = \frac{Q}{(K-1)}
 \end{equation}
 $$
-<!-- 
-#### Дисперсия гетерогенности $\tau^2$
+
+<!-- #### Дисперсия гетерогенности $\tau^2$
 
 Истинный взвешенный эффект имеет собственную дисперсию $\tau^2$ и стандартное отклонение $\tau$.
 
