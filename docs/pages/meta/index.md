@@ -1,10 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
-  word_document: default
----
-
 <!-- Graphics from https://docs.google.com/presentation/d/1rAcCuietHzjIvflFLC9I8VthZ5uozTowefzN6Pd1oec/edit#slide=id.g1a4b64647ba_0_0 -->
 
 <script type="text/javascript" id="MathJax-script" async

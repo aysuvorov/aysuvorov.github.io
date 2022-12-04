@@ -1,5 +1,9 @@
 # Hypothesis testing concepts
 
+<p align="center">
+  <img src="https://i.pinimg.com/564x/8b/ec/3e/8bec3e83a7c6e81145cae29765afb249.jpg" />
+</p>
+
 - [Hypothesis testing concepts](#hypothesis-testing-concepts)
   - [Concept of planned studies](#concept-of-planned-studies)
   - [Research and statistical hypotheses](#research-and-statistical-hypotheses)

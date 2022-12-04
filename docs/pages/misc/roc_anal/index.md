@@ -1,5 +1,9 @@
 # Understanding ROC - analysis
 
+<p align="center">
+  <img src="https://i.pinimg.com/564x/a0/26/99/a026998720b34ef0990be92fb15b965f.jpg" />
+</p>
+
 - [Understanding ROC - analysis](#understanding-roc---analysis)
   - [Error matrix](#error-matrix)
   - [ROC-curve construction](#roc-curve-construction)
