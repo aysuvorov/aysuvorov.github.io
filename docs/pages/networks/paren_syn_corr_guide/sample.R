@@ -51,8 +51,6 @@ distance_extension <- function(x, gr_countour,center) {
   return(1)
 }
 
-diff(1:10, 2)
-
 
 # +-----------------------------------------------------------------------------
 kernel_parenclitic_kde <- function(df) {
