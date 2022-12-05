@@ -9,10 +9,13 @@ y = rnorm(15, 30.0, 10.0)
 
 df = cbind.data.frame(x,y)
 
-dens = kde2d(x, y)
+dens = kde2d(x, y, n = 16)
 
 image(dens) 
 contour(dens, add=T)
+
+str(dens$z)
+plot(dens$z[1,])
 
 gr <- data.frame(with(dens, expand.grid(x,y)), as.vector(dens$z))
 names(gr) <- c("xgr", "ygr", "zgr")
@@ -24,9 +27,13 @@ df$pointdens <- predict(mod, newdata=data.frame(xgr=df[,1], ygr=df[,2]))
 print(df$pointdens)
 sum(df$pointdens)
 
+subset(df, df$pointdens == max(df$pointdens,na.rm=T))
+
 gr$preds <- predict(mod, newdata=data.frame(xgr=gr[,1], ygr=gr[,2]))
 print(gr$preds)
 sum(gr$preds)
+
+subset(gr, gr$preds == max(gr$preds,na.rm=T))
 
 df$pointdens <- df$pointdens/sum(gr$preds)
 
@@ -34,9 +41,17 @@ gr$preds <- gr$preds/sum(gr$preds)
 
 center <- subset(gr, gr$preds == max(gr$preds,na.rm=T))
 
+gr_countour <- subset(gr,gr$xgr == max(gr$xgr) | gr$ygr == max(gr$ygr) | gr$xgr == min(gr$xgr) | gr$ygr == min(gr$ygr))
+v <-  gr$preds
+df$pointdens3 <- unlist(lapply(df$pointdens, function(x) 1-sum(v[v<=x], na.rm=T)))
+df$pointdens2 <- apply(df,1,function(x) ifelse(is.na(x[6]) == T, distance_extension(x, gr_countour,center), 
+  as.numeric(x[6])))
 
+distance_extension <- function(x, gr_countour,center) {
+  return(1)
+}
 
-
+diff(1:10, 2)
 
 
 # +-----------------------------------------------------------------------------
