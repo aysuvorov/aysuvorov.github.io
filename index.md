@@ -21,7 +21,7 @@
 
 ## Code samples and scripts
 
-- [Code samples and scripts](https://github.com/aysuvorov/medstats))
+- [Code samples and scripts](https://github.com/aysuvorov/medstats)
 
 ## Publications, patents and conference presentations
 
