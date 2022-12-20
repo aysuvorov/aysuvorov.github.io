@@ -9,16 +9,24 @@
 **Contents**
 
 - [About me](#about-me)
-- [Educational materials](#educational-materials)
 - [Code samples and scripts](#code-samples-and-scripts)
 - [Publications, patents and conference presentations](#publications-patents-and-conference-presentations)
-- [Lectures](#lectures)
+- [Educational materials](#educational-materials)
 
 ---
 
 ## About me
 
 - [CV and skills](./docs/promotion/cv/cv_raw.html)
+
+## Code samples and scripts
+
+- [Code samples and scripts](https://github.com/aysuvorov/medstats))
+
+## Publications, patents and conference presentations
+
+- [ORCID list](https://orcid.org/0000-0002-2224-0019)
+- [Full list (unsorted)]()
 
 ## Educational materials
 
@@ -37,10 +45,3 @@
 
 - [Understanding ROC - analysis](./docs/pages/misc/roc_anal/index.md)
 
-## Code samples and scripts
-
-- [Code samples and scripts](./docs/code_samples/index.md)
-
-## Publications, patents and conference presentations
-
-## Lectures

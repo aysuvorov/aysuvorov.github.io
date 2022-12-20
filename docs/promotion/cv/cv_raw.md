@@ -14,19 +14,25 @@ css: "https://latex.now.sh/style.min.css"
 
 **E-mail**: [yourmedstat@gmail.com](yourmedstat@gmail.com)
 
-**Web site with code samples (R / Python)**: [https://aysuvorov.github.io/](https://aysuvorov.github.io/)
+**Web site with projects (R / Python)**: [https://aysuvorov.github.io/](https://aysuvorov.github.io/)
 
 **Telegram**: [https://t.me/clinical_biostats](https://t.me/clinical_biostats)
 
 **Github**: [https://github.com/aysuvorov/](https://github.com/aysuvorov/)
 
-**Facebook**: [https://www.facebook.com/yourmedstat](https://www.facebook.com/yourmedstat)
+<!-- **Facebook**: [https://www.facebook.com/yourmedstat](https://www.facebook.com/yourmedstat) -->
 
 **ORCID profile**: [0000-0002-2224-0019](https://orcid.org/0000-0002-2224-0019)
 
 **SCOPUS profile**: [57213827983](https://www.scopus.com/authid/detail.uri?authorId=57213827983)
 
 **[Google Scholar profile](https://scholar.google.com/citations?user=3QETpFwAAAAJ&hl=en)**
+
+**ResearchGate**: [https://www.researchgate.net/profile/Aleksandr-Suvorov](https://www.researchgate.net/profile/Aleksandr-Suvorov)
+
+**LinkedIn**: [https://www.linkedin.com/in/aleksandr-suvorov-aa8abb18b/](https://www.linkedin.com/in/aleksandr-suvorov-aa8abb18b/)
+
+
 
 ### Desired position
 
