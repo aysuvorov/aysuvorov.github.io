@@ -26,7 +26,7 @@
 ## Publications, patents and conference presentations
 
 - [ORCID list](https://orcid.org/0000-0002-2224-0019)
-- [Full list (unsorted)](./docs/promotion/cv/images/pub_list_total.md)
+- [Full list (unsorted)](./docs/promotion/cv/pub_list_total.md)
 
 ## Educational materials
 
