@@ -29,6 +29,10 @@ MathJax = {
   <img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" />
 </p>
 
+Aleksandr Suvorov
+
+5.01.2023
+
 ## Abstract
 
 ### Key words
