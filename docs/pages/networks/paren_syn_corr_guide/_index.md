@@ -23,6 +23,24 @@ MathJax = {
 </script>
 
 
+<!-- pandoc --citeproc -s Main_text_body.md -o 123.docx -->
+
+<!-- About styles
+https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html
+
+Styles repository
+https://www.zotero.org/styles?q=AMA -->
+
+<!-- 
+Video by some guy
+https://www.youtube.com/watch?v=J86Pm62XM_Q -->
+
+<!-- Статьи ребят: -->
+
+<!-- Демичев - подход с бинарными переменными
+https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.full.pdf
+Коды Демичесва: https://www.medrxiv.org/content/10.1101/2021.06.24.21259374v1.supplementary-material -->
+
 ## Dynamic and thermodynamic models of adaptation
 
 <p align="center">
@@ -35,138 +53,136 @@ MathJax = {
 
 ## Introduction
 
-Network theory made it possible to take a different look at biological systems and processes. Unlike simple models that describe specific phenomenons, network analysis allows to take into account complex interacting factors or features. Such features can be represented as graph nodes that will reflect a particular system (organism, cell, population, etc., that is, some experimental unit of interest).
+Теория графов позволила по-другому взглянуть на живые организмы и протекание биологических процессов. В отличие от простых моделей, описывающих конкретные процессы, сетевой анализ позволяет учесть множество взаимодействующих между собой факторов или характеристик. Такие характеристики можно представить в качестве узлов графа, который будет отражать ту или иную систему (организм, клетка, популяция и т.д., то есть, некая экспериментальная единица, представляющая для нас интерес). 
 
-Features somehow interact with each other and the nature of their interaction can be estimated in some way. Such an estimate can be represented as an attribute or weight of an edge between feature nodes.
+Факторы неким образом взаимодействуют между собой и характер их взаимодействия возможно неким образом оценить. Такая оценка может быть представлена, как атрибут или вес ребра между факторами-узлами.
 
-Of course, in biological systems the features of the ongoing processes are extremely variable and may have complex distributions. Thus, it seems extremely difficult to determine some models that describe the interactions between features and estimate the weight of the factors-nodes themselves. Such models must be extremely complex and non-linear. The choice of specific models can be done empirically.
+Безусловно, в биологических процессах и живых системах характеристики протекающих процессов крайне изменчивы и имеют сложные распределения. Таким образом, представляется крайне сложным определить некие модели, описывающие взаимодействия между характеристиками и оценивающие вес самих факторов-узлов. Такие модели должны быть крайне сложными и нелинейными. Выбор конкретных моделей может быть осуществлен эмпирически. 
 
-Moreover, network analysis also allows us to evaluate system dynamic changes in the structure of the graph, which brings this type of analysis even closer to a realistic description of biological systems. When assessing dynamic fluctuations in such structures, promising areas are the assessment of system reactions to any external stimuli, the assessment of adaptation, "crisis" situations and complete failure of adaptation.
+Более того, сетевой анализ позволяет еще и динамически оценивать системы, как изменения во времени структуры графа и его характеристик, что еще более приближает данный вид анализа к реалистичному описанию биологических систем. При оценке динамических колебаний в таких структурах перспективными напрвавлениями являются оценка реакций систем на какие-либо внешние раздражители, оценка адаптации, кризисных ситуаций и полной дезадаптации систем. 
 
 ## Materials
 
-There is a great number of different models and approaches that allow one or another biological experimental unit to be represented as a network of basic features. We will focus on some of them in order to provide a basic understanding of how interactions between factors are formed and evaluated, which will allow the use of a network analysis approach in descriptive and predictive models.
+Сегодня существует огромное количество различных моделей и подходов, позволяющих представить ту или иную биологическую экспериментальную единицу в виде сети из основных характеристик. В настоящей статье мы остановимся на некоторых из них, для того, чтобы базовые представления о том, как формируются и оцениваются взаимодействия между факторами, что позволит использовать подход, связанный с сетевым анализом в описательных и прогностических моделях. 
 
-### Biological system model
+### Модель биологической системы
 
-The most important question is of choosing the most representative descriptive model of relations in a graph. The graph below shows a weighted graph $G$ with $V$ nodes and $E$ edges.
+Наиболее важным есть и остается вопрос о выборе наиболее репрезентативной описательной модели взаимосвязей в графе. Ниже на графике представлен некий взвешенный граф $G$ имеющий $V$ узлов и $E$ ребер. 
 
-Nodes represent features of the experimental unit. They can be ranked, and then their weight will be different (on the chart, nodes with different weights have different sizes). The edges weights characterize a certain assessment of the relations between the nodes. The thickness of the edges on the graph is proportional to the weights. The connection may be completely absent (on the graph - nodes A and C, A and G), then the edge is not built.
+Узлы являются характеристиками экспериментальной единицы. Они могут иметь ранжирование, и тогда их вес будет различаться (на графике узлы с разным весом имеют разный размер). Веса ребер характеризуют некую оценку взаимосвязей между узлами. толщина ребер на графике пропорциональна весу. Связь может и полностью отсутствовать (на графике - узлы A и C, A и G), тогда ребро не строится. 
 
 ![Primer of weighted graph](./images/1.0-weighted-graph.png)
-**Figure 1.** An example of a weighted graph. 
-Vertices and edges have a size and thickness based on their weights.
+**Figure 1.** Пример взвешенного графа. Вершины и ребра имеют размер и толщину в зависимости от их весов. 
 
-Theoretically, the graph can also be directed, in certain situations this can increase the realism of the model. 
+Теоретически, граф может быть и направленным, что, в определенных ситуациях, может повысить реалистичность модели. 
 
-The fundamental issue is the choice of the system that we consider as a network.
+Принципиальным вопросом является выбор той системы, которую мы рассматриваем в виде сети. 
 
-Such systems can be:
+Такими системами могут быть: 
 
-1. Some individual experimental units of one set (patients, bacterial colonies, laboratory animals, protein systems, etc.) - in this case, the graph will represent such individual unit. All other units should have a similar set of features, while differences will be noted only in the weights of the edges (representing differencies in relation between unit features);
+1. Некие индивидуальные экспериментальные единицы одного множества (пациенты, колонии бактерий, лабораторные животные, белковые системы и т.д.) - в таком случае, граф и будет представлять такую единицу. Все остальные единицы должны иметь сходный набор характеристик, различия же будут отмечаться лишь по весам вершин и ребер;
 
-2. One single system with properties dynamically changing over time. In this case, its states at different time points can be represented as graphs. Such networks should also have a similar set of features (nodes) with interconnections (edge weights) changing over time;
+2. Одна единственная система, свойства которой динамически меняются во времени. В таком случае, ее состояния в различных временных точках могут быть представлены в виде графов. Такие сети также должны иметь сходный набор характеристик (узлы), чьи веса и взаимные связи (атрибуты ребер) меняются со временем;
 
-3. Some individual experimental units of one set, the properties of which change over time. Thus, a set of graphs will be obtained that characterizes each individual experimental unit, as in case (1), and also for each such unit it will be possible to construct dynamic graphs, as in case (2).
+3. Некие индивидуальные экспериментальные единицы одного множества, свойства которого меняются со временем. Таким образом, будет получен набор графов, характеризующий каждую индивидуальную экспериментальную единицу, как в случае (1), а также для каждой такой единицы с учетом временных точек возможно будет построить динамические графы, как в случае (2). 
 
-## Methods
+## Методы
 
-There are several steps in building graphs for experimental units:
+Существуют несколько логических этапов, связанных с построением графов для экспериментальных единиц:
 
-1. The choice of the systems that we want to represent as a network and the tasks we want to solve - will it be a classification task or an assessment of dynamic changes, etc.? This step precedes the selection of an appropriate model to calculate the attributes of the edges. Thus, the analysis of dynamic changes in the system indicates the choice of a correlation model. The task of classification is rather associated with the choice of other types of models;
-2. Preliminary data transformation;
-3. Determining the features that will be the nodes of the future graphs;
-4. Choice of a model and a method that will allow estimating the weights of the edges;
-5. Transforming units into graphs;
-6. Next, we can go one of two ways:
+1. Выбор задач по работе с системой, которую мы хотим представить в виде сети - будет ли это задача классификации или оценка динамических изменений и т.д.? Данный этап предваряет выбор соответствующей модели, которая может быть выбрана для расчета атрибутов ребер. Так, анализ динамических изменений в системе указывает на выбор корреляционной модели. Задача классификации скорее связана с выбором иных типов моделей; 
+2. Предварительная трансформация данных;
+3. Определение характеристик, которые будут являться узлами будущего графа;
+4. Выбор модели и метода, который позволит оценить вес ребер;
+5. Построение графа;
+6. Далее мы можем пойти одним из двух путей: 
 
-    - Calculation specific graph characterics and subsequent calculations with these characterics, as with new features of the experimental unit. We can then transform the data and send it to be trained by some classifier (machine learning algorithm, neural network, etc.);
+   - Расчет ряда показателей для каждого графа и последующая работа с этими  показателями, как с новыми характеристиками экспериментальной единицы. Мы затем можем трансформировать данные и отправить их на обучение некоего классификатора (алгоритм машинного обучения, нейронная сеть и т.д.);
 
-    - Sending a whole graph or a list of graphs for training in a graph neural network (GNN).
+   - Отправка целого графа или массива из графов для обучения в графовую нейронную сеть (GNN).
 
-### Assigning weights to edges
+### Присвоение веса ребрам
 
-The vast majority of the features at the level of biochemical parameters, immunological reactions, genetic polymorphisms, etc. are quantitative. When considering the other levels of networks, e.g. patients as units, their medical history and examination results, most of them are qualitative.
+Если говорить о моделях, работающих на уровне биохимических показателей, иммунологических реакций, описывающих генетические полиморфизмы и т.д. - подавляющее большинство характеристик экспериментальной единицы являются количественными. При рассмотрении пациента в рамках экспериментальной единицы, его истори заболевания и результатов обследований, других характеристик, большая часть из них являются качественными. 
 
-The calculation of the edge weight is usually based on some model that evaluates the relationship between the characteristics. The simplest option implies that a single type of model can be used to evaluate all pairwise relationships between features. Various model results and indicators can be used as a relation measure: it can be the magnitude of the error in the linear regression [@Zanin2011Sep], [@Nazarenko2021Oct], the calculated probability of belonging to the class[@Krivonosov2022Jan], the correlation[@Gorban2009May], or something else. Thus, it is obvious that the type of model used to calculate the weights should be as universal as possible and describe various types of relationships, including non-linear ones.
+В основе расчета веса ребра обычно используется какой-либо рассчитанный показатель модели, оценивающей связь между характеристиками. Наиболее простой вариант подразумевает, что единый тип модели используется для оценки всех попарных связей между характеристиками. В настоящей статье мы рассмотрим различные показатели: это может быть величина ошибки в линейной регрессии[@Zanin2011Sep],[@Nazarenko2021Oct], рассчитанная вероятность принадлежности к классу[@Krivonosov2022Jan], корреляция[@Gorban2009May], либо что-то иное. Таким образом очевидно, что тип модели, используемый для расчета весов, должен быть как можно более универсальным и работать с различными типами отношений, в том числе и с нелийнеными. 
 
-There are three popular approaches for assigning weight to an edge:
+Можно выделить три основных подхода к присвоению веса ребру:
 
-- direct assignment of weight to the edge, as a result a weighted graph is constructed;
-- construction of an edge, provided that the calculated model indicator is above or below a certain threshold. The edge is built, and the weight value corresponds to 1. In this case it is necessary to set a certain threshold value. The threshold may be known, but it may also be determined empirically;
-- a combination of both previous approaches: the edge is built under the condition that the calculated indicator is above/below the threshold, while the weight of the edge corresponds to the calculated model indicator. If the value of the indicator does not exceed the threshold, the edge is absent.
+- прямое присвоение веса каждому ребру, в результате чего мы получаем взвешенный граф;
+- построение ребра при условии, что рассчитанный показатель выше или ниже определенного порога. Ребро строится, а величина веса соответствует 1. В таком случае, необходимо установить некую величину порога. Порог может быть известен, но может быть и определен эмпирически;
+- комбинация обоих предшествующих подходов: ребро строится при условии, что рассчитанный показатель выше порога, при этом вес ребра соответствует расчитанному показателю. Если величина рассчитанного показателя не превышает порог, ребро отсутствует. 
 
-Based on these approaches various methods are mentioned in the literature: 
+Исходя из этих подходов, ниже будут рассмотрены методы построения наиболее изученных моделей, которые уже неоднократно были использованы в экспериментальных исследованиях:
 
-- parenclitic graphs using threshold[@Zanin2011Sep];
-- weighted parenclitic graphs[@Nazarenko2021Oct], [@Whitwell2018Apr];
-- weighted sinolithic graphs[@Krivonosov2022Jan];
-- correlation graphs using threshold[@Gorban2009May];
-- weighted correlation graphs[@Gorban2009May].
+- паренклитические графы с использованием порога[@Zanin2011Sep];
+- взвешенные паренклитические графы[@Nazarenko2021Oct], [@Whitwell2018Apr];
+- взвешенные синолитические графы[@Krivonosov2022Jan];
+- корреляционные графы с использованием порога[@Gorban2009May];
+- взвешенные корреляционные графы[@Gorban2009May].
 
-Let us consider in detail the process of constructing various graphs of each type.
+Рассмотрим детально процесс построения различных каждого типа графов.
 
-### Basic graph building methods
+### Основные методы построения графов
 
-#### Parenclitic networks using linear model and threshold (tLRPA)
+#### Паренклитические сети с использованием линейной модели и порога (tLRPA)
+<!-- https://sci-hub.ru/10.1063/1.3608126 -->
 
-The parenclitic approach bases on the hypothesis that there is a linear relation between the features of "normal" or "healthy" units. The process of calculating the edge weights is based on a linear regression equation. Let's take a closer look at the step by step process.
+Паренклитический подход допускает гипотезу о том, что между характеристиками, которыми обладают нормальные или "здоровые" единицы некоего множества существует линейная взаимосвязь. Процесс расчета веса ребер опирается на уравнение линейной регрессии. Рассмотрим пошаговый процесс подробнее.  
 
-1. The set of "healthy" or "normal" units is defined (control group).
+1. Определяются экспериментальные единицы, которые являются контрольной группой - данная группа представляет множество "здоровых" или "нормальных" единиц. 
    
-2. The features that will be the future vertices of the graph are defined, for example, {A, B, C}. Pairwise combinations without repetitions between the features of the unit are determined: {A-B; A-C; B-C}. For further construction of graphs it is important that the combinations themselves and the order of elements are identical for all experimental units.
+1. Определяются характеристики, которые будут являться вершинами графа, например, {А, В, С}. Затем определяются попарные комбинации без повторений между характеристиками единицы: {A-B; A-C; B-C}. Для дальнейшего построения графов и работы с ними важно, чтобы сами комбинации и порядок элементов были идентичными для всех экспериментальных единиц. 
 
-3. For each pairwise combination of characteristics ($x$, $y$) of the entire control group, a linear regression model is fitted:
+1. Для каждой попарной комбинации характеристик ($x$, $y$) всей контрольной группы строится уравнение линейной регрессии в матричной нотации:
 
-     $$
-     \begin{equation}
-     Y = X\beta_{xy} + \epsilon
-     \end{equation}
-     $$
+    $$
+    \begin{equation}
+    Y = X\beta_{xy} + \epsilon
+    \end{equation}
+    $$
 
-     , where $\epsilon$ will be an array with residuals.
+    , где $\epsilon$ будет являться массивом с остатками в уравнении линейной регрессии. 
 
-     Thus, for each pair of characteristics ($x$, $y$) for $n$ experimental units, there is an array with residuals [$\epsilon_1,\ \epsilon_2,\ \epsilon_3,\ ...\ \epsilon_n$]. Since we know the value of both features, we can calculate $\epsilon_i$ as follows:
+    Таким образом, для каждой пары характеристик ($x$, $y$) для $n$ - экспериментальных единиц имеется массив с отклонениями [$\epsilon_1,\ \epsilon_2,\ \epsilon_3,\ ...\ \epsilon_n$]. Так как мы знаем значение обеих характеристик, рассчитать $\epsilon_i$ можно, как:
 
-     $$
-     \begin{equation}
-     \epsilon_i = \beta_{0} + \beta_{1}x_i - y_i
-     \end{equation}
-     $$
+    $$
+    \begin{equation}
+    \epsilon_i = \beta_{0} + \beta_{1}x_i - y_i 
+    \end{equation}
+    $$
 
-4. For the control group, for each pair of characteristics ($x$, $y$), linear regression coefficients $\beta_{0xy}, \beta_{1xy}$ are also obtained.
+1. Для группы контроля для каждой пары характеристик ($x$, $y$) также получены коэффициенты линейной регрессии $\beta_{0xy}, \beta_{1xy}$. 
 
-5. Array with residuals is converted to absolute Z-values, |Z-scores|:
+1. Массивы с отклонениями преобразуются в абсолютные Z-значения, |Z-scores|:
 
-     $$
-     \begin{equation}
-     abs(z_i) = \frac{|\epsilon_i - \hat{\epsilon}_{CTRL}|}{\sigma(\epsilon_{CTRL})}
-     \end{equation}
-     $$
+    $$
+    \begin{equation}
+    abs(z_i) = \frac{|\epsilon_i - \hat{\epsilon}_{CTRL}|}{\sigma(\epsilon_{CTRL})}
+    \end{equation}
+    $$
 
-     , where
+    , где 
 
-     - $i$ - experimental unit,
-     - $\hat{\epsilon}_{CTRL}$ - mean residual $\epsilon_{1:i}$ from the linear regression equation for features ($x$, $y$) for the control group,
-     - $\sigma(\epsilon_{CTRL})$ - standard deviation of $\epsilon_{1:i}$ residual values for the control group.
-
-#######################
+    - $i$ - экспериментальная единица,
+    - $\hat{\epsilon}_{CTRL}$ - среднее отклонений $\epsilon_{1:i}$ из уравнения линейной регрессии для характеристик ($x$, $y$) по контрольной группе,
+    - $\sigma(\epsilon_{CTRL})$ - стандартное отклонение значений отклонений $\epsilon_{1:i}$  по контрольной группе.
   
-6. As a result, for each pair of characteristics ($x$, $y$) we have obtained linear regression equations with coefficients ($\beta_{0xy}, \beta_{1xy}$). All intermediate stages before graph construction are completed.
+2. В результате, для каждой пары характеристик ($x$, $y$) мы получили уравнения линейной регрессии с коэффициентами ($\beta_{0xy}, \beta_{1xy}$). Все промежуточные этапы перед построением графов завершены. 
 
-7. Next, we get some experimental units that are of interest to us. These may be the same units or some new ones, etc. We substitute the values of the characteristics of these units ($x_i$, $y_i$) into the already obtained linear regression equations and for each experimental unit we obtain its own value $\epsilon_i$. Further, from them we calculate absolute Z-scores from formula (3).
+3. Далее мы получаем некие экспериментальные единицы, представляющие для нас интерес. Это могут быть те же единицы или какие-то новые и т.д. Мы подставляем значения характеристик этих единиц ($x_i$, $y_i$) в уже полученные уравнения линейных регрессий и для каждой экспериментальной единицы получаем свое значение $\epsilon_i$. Далее, из них мы рассчитываем абсолютные Z-scores из формулы (3). 
 
 ![](./images/lm-regr-graph.png)
-Linear regression between features ($x$, $y$). Each blue dot represents an experimental unit. The regression residuals are green or red. The gray lines show the boundaries of the threshold. If the normalized absolute values of the residuals do not exceed the threshold, they are colored green. When the threshold is exceeded, the residues are colored red.
+Линейная регрессия между характеристиками ($x$, $y$). Каждая синяя точка представляет собой экспериментальную единицу. Остатки регрессии зеленого или красного цвета. Серые линии показывают границы порога. Если нормализованные абсолютные значения остатков не превышают порог, они окрашены зеленым цветом. При превышении порога, остатки окрашены в красный цвет. 
 
-4. Next, from each experimental unit, a graph $G(V, E)$ is constructed, in which the characteristics become the set of nodes $V$, and $E$ - the set of edges. If the calculated value $abs(z_i)$ for a pair of nodes ($x_i$, $y_i$) is greater than or equal to a certain threshold, an edge is built. If the value is less than the threshold, there is no edge. No weight is assigned to the edge. Thus, units resembling the control group should have small $\epsilon$ deviations and no edges will line up. If the deviation is very large, the unit differs from the control group and does not obey the calculated linear relationship, and the edge will be built.
+4. Далее, из каждой экспериментальной единицы строится граф $G(V, E)$, в котором характеристики становятся совокупностью узлов $V$, а $E$ - совокупность ребер. В случае, если рассчитанное значение $abs(z_i)$ для пары узлов ($x_i$, $y_i$) больше определенного порога или равно ему, ребро строится. Если значение меньше порога, ребро отсутствует. Вес ребру не присваивается. Таким образом, единицы, напоминающие контрольную группу должны иметь небольшие отклонения $\epsilon$ и ребра выстроены не будут. В случае, если отклонение очень велико, единица отличается от контрольной группы и не подчиняется рассчитанной линейной зависимости, а ребро будет построено. 
 
-The difficulty is in determining the threshold value. In M.Zanin and S.Bocaletti [@Zanin2011Sep] the threshold was taken as $abs(z)$ = 2.
+Сложность представляет определение величины порога. В работе M.Zanin and S.Bocaletti [@Zanin2011Sep] порог был принят за $abs(z)$ = 2. 
 
 ![Figure 1](./images/threshold-graph.png)
-**Figure 1.** An example of a graph with threshold values for a hypothetical experimental unit of a parenclitic network. Edges corresponding to $abs(z)$ below threshold 2 are not built (sharp red dotted line). Edges that correspond to $abs(z)$ greater than or equal to 2 are built (bright blue), with the same thickness of the edges, their weights are equal (equal to 1). The indicated numbers do not correspond to the weight of the edge, but to the calculated $abs(z)$.
+**Figure 1.** Пример графа с пороговыми значениями гипотетической экспериментальной единицы паренклитической сети. Ребра, которым соответствует $abs(z)$ ниже порога 2, не построены (усклый красныфй пунктир). Ребра, которым соответствует $abs(z)$ выше или равный 2, построены (яркий синий цвет), при этом толщина ребер одинакова, их веса равные (равны 1). Указанные числа соответствуют не весу ребра, но рассчитанному $abs(z)$.
 
-The thickness of the ribs corresponds to the weight of the absolute Z-value between characteristics A, B and C.
+Толщина ребер соответствует величине веса абсолютного Z-значения между характеристиками A, B и C. 
 
 #### Взвешенные паренклитические сети с использованием линейной модели (wLRPA)
 
