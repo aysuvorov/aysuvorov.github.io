@@ -149,141 +149,131 @@ The parenclitic approach bases on the hypothesis that there is a linear relation
      - $i$ - experimental unit,
      - $\hat{\epsilon}_{CTRL}$ - mean residual $\epsilon_{1:i}$ from the linear regression equation for features ($x$, $y$) for the control group,
      - $\sigma(\epsilon_{CTRL})$ - standard deviation of $\epsilon_{1:i}$ residual values for the control group.
-
-#######################
   
-6. As a result, for each pair of characteristics ($x$, $y$) we have obtained linear regression equations with coefficients ($\beta_{0xy}, \beta_{1xy}$). All intermediate stages before graph construction are completed.
+6. For each pair of characteristics ($x$, $y$) we have obtained linear regression coefficients ($\beta_{0xy}, \beta_{1xy}$). All intermediate stages before graph construction are completed.
 
-7. Next, we get some experimental units that are of interest to us. These may be the same units or some new ones, etc. We substitute the values of the characteristics of these units ($x_i$, $y_i$) into the already obtained linear regression equations and for each experimental unit we obtain its own value $\epsilon_i$. Further, from them we calculate absolute Z-scores from formula (3).
+7. Next, we get some experimental unit $i$ that is of interest to us. We substitute the values of the features ($x_i$, $y_i$) into the already obtained linear regression equations and obtain its own value $\epsilon_i$. Further,  we calculate absolute Z-score from formula (3). We repeat the prossess for every new experimental unit.
 
 ![](./images/lm-regr-graph.png)
-Linear regression between features ($x$, $y$). Each blue dot represents an experimental unit. The regression residuals are green or red. The gray lines show the boundaries of the threshold. If the normalized absolute values of the residuals do not exceed the threshold, they are colored green. When the threshold is exceeded, the residues are colored red.
+Linear regression between features ($x$, $y$). Each blue dot represents an experimental unit. The regression residuals are green or red. The gray lines show the boundaries of the threshold. If the normalized absolute values of the residuals do not exceed the threshold, they are colored green. When the threshold is exceeded, the residuals are colored red.
 
-4. Next, from each experimental unit, a graph $G(V, E)$ is constructed, in which the characteristics become the set of nodes $V$, and $E$ - the set of edges. If the calculated value $abs(z_i)$ for a pair of nodes ($x_i$, $y_i$) is greater than or equal to a certain threshold, an edge is built. If the value is less than the threshold, there is no edge. No weight is assigned to the edge. Thus, units resembling the control group should have small $\epsilon$ deviations and no edges will line up. If the deviation is very large, the unit differs from the control group and does not obey the calculated linear relationship, and the edge will be built.
+1. From each experimental unit, a graph $G(V, E)$ is constructed, the features become the set of nodes $V$, and $E$ - the set of edges. If the calculated value $abs(z_i)$ for a pair of nodes ($x$, $y$) is greater than or equal to a certain threshold, an edge is built. If the value is less than the threshold, there is no edge. Thus, units similar to the control group should have small $abs(z_i)$ and graphs representing theese units will have few edges. Units highly deviating from control group will have large $abs(z_i)$ and more constructed edges: if the residual is very large, the unit differs from the control group and does not obey the calculated linear relationship, and the edge will be built.
 
-The difficulty is in determining the threshold value. In M.Zanin and S.Bocaletti [@Zanin2011Sep] the threshold was taken as $abs(z)$ = 2.
+The main challenge is in the determining the threshold. In the work of M.Zanin and S.Bocaletti [@Zanin2011Sep] the threshold was taken as $abs(z)$ = 2.
 
 ![Figure 1](./images/threshold-graph.png)
-**Figure 1.** An example of a graph with threshold values for a hypothetical experimental unit of a parenclitic network. Edges corresponding to $abs(z)$ below threshold 2 are not built (sharp red dotted line). Edges that correspond to $abs(z)$ greater than or equal to 2 are built (bright blue), with the same thickness of the edges, their weights are equal (equal to 1). The indicated numbers do not correspond to the weight of the edge, but to the calculated $abs(z)$.
+**Figure 1.** An example of a graph with threshold values for a hypothetical experimental unit of a parenclitic network. Edges corresponding to $abs(z)$ below threshold 2 are not built (sharp red dotted line). Edges that correspond to $abs(z)$ greater than or equal to 2 are built (bright blue). The indicated numbers do not correspond to the weight of the edge, just to the calculated $abs(z)$.
 
-The thickness of the ribs corresponds to the weight of the absolute Z-value between characteristics A, B and C.
+#### Weighted parenclitic networks using linear model (wLRPA)
 
-#### Взвешенные паренклитические сети с использованием линейной модели (wLRPA)
+The need of the threshold raises large number of challenges. One way to get rid of the threshold is to build a weighted graph. The step by step process is as follows:
 
-Необходимость обосновать и вводить порог ставит большое количество вопросов. Одним из способов отказать ся от порога является построение взвешенного графа. Пошаговый процесс заключается в следующем:
+1. Follow the steps similar to 1. - 7. for the parenclitic approach with a threshold.
 
-1. Выполняются пункты, аналогичные 1. - 7. для паренклитического подхода с порогом. 
-
-8. Из каждой экспериментальной единицы строится граф $G(V, E)$, в котором характеристики становятся совокупностью узлов $V$, а $E$ - совокупность ребер. При этом строятся все ребра графа, но каждому ребру присваивается вес, равный соответствующему значению абсолютного отклонения $\epsilon$. Полученные графы являются взвешенными.
+2. Since there is no threshold, all edges of the graph are constructed, but each edge is assigned a weight equal to the corresponding value of the absolute deviation $abs(z)$. The resulting graphs are weighted.
 
 ![Figure 1](./images/weighted-full-graph.png)
-**Figure 1.** Пример взвешенного графа гипотетической экспериментальной единицы паренклитической сети. Вес ребра соответствует $abs(z)$, что отраженопри отрисовки толщины ребра. 
+**Figure 1.** An example of a weighted graph of a hypothetical experimental unit of a parenclitic network. The weight of the edge and the edge thickness corresponds to $abs(z)$.
 
-#### Паренклитические сети с использованием оценки ядерной плотности (wKDEPA)
+#### Parenclitic networks using nuclear density estimation (wKDEPA)
 
-<!-- Инструкции по KDE здесь https://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=downloadSuppFile&path%5B%5D=25216&path%5B%5D=31730 [@Whitwell2018Apr] -->
+When using linear regression method for the construction of parenclitic graphs, we assumed that there is a linear relation between the features. However, this does not always happen, and the distribution of features is usually non-linear. Various approaches were proposed to describe both linear and non-linear relations in a single method. One of such approaches is kernel density estimation. Theoretically the approach can be used for both quantitative and categorical variables. In practice, the estimation of association between variables of different types differs [@Whitwell2018Apr]. Let's take a look at the individual steps of this method.
 
-При использовании предшествующего метода с построением паренклитических графов мы допускали, что между характеристиками присутствует линейная взаимосвязь. однако в реальной ситуации такое бывает далеко не всегда, а распределение характеристик и их тип могут варьировать. Для того, чтобы преодолеть эту ситуацию, в теории можно использовать метод ядерной оценки плотности. Оценка ядерной оценки плотности возможно как для количественных, так и для категориальных переменных. На практике оценка связи между переменными различных типов различается [@Whitwell2018Apr]. Разберем отдельные этапы данного метода.  
-
-1. Снова выделяются экспериментальные единицы, которые являются контрольной группой или группой "нормальных" единиц. Также выделяются попарные комбинации характеристик.
+1. Again, control group of "normal" units is specified. Pairwise combinations of features are also produced.
  
-2. Для каждой комбинации характеристик ($x$, $y$) создается квадратная two dimensional kernel density matrix, получившая название контурной матрицы. Количество строк и столбцов матрицы должно превышать длину векторов $x$ и $y$, но выбирается эмпирически, с учетом количества экспериментальных единиц и вычислительной мощности. 
+2. For each pairwise combination of features ($x$, $y$) a square two dimensional kernel density matrix is created which is called the *contour matrix*. The number of rows and columns of the matrix must exceed the length of the vectors $x$ and $y$, but is chosen empirically, taking into account the number of experimental units and computational power.
 
-3. На построенной контурной матрице точка с наибольшей плотностью становится т.н. центром.
+3. On the constructed contour matrix, the point with the highest density becomes the so-called center.
 
 ![Figure 1](./images/kde-topo.png)
-Пример контурной матрицы плотности для характеристик ($x$, $y$). Красные точки показывают отдел ные экспериментальные единицы. Центр или точка с наибольшей плотностью представлена зеленым ромбом. 
+An example of a contour density matrix for features ($x$, $y$). Red dots show individual experimental units. The center or point with the highest density is represented by a green diamond.
 
-4. В общем случае, для каждой экспериментальной единицы, которая имеет координаты по характеристикам ($x$, $y$) на контурной матрице, мы вычисляем расстояние от центра матрицы до точки. Данное расстояние может быть использовано в качестве веса для данной экспериментальной единицы. 
+4. Generally, for each experimental unit $i$ with coordinates by features [$x_i$, $y_i$] on the contour matrix, we calculate the distance from the center of the matrix to the coordinate point. Euclidean or Mahalanobis distance are popular approaches. The distance can serve as a raw edge weight for this unit. More complex idea is to estimate the volume under the densities that are higher than the density where the point is within the distribution.
 
-1. Существующие подходы к вычислению весов ребер описаны в работе Whitwell, H. J. et al. [@Whitwell2018Apr] и являются экспериментальными. Имеются подходы для оценки весов в случае, если характеристики ($x$, $y$) являются количественными или одна является количественной, а другая - категориальной. Работы в этом направлении продолжаются. 
+5. Different approaches for calculating edge weights depending on feature distributions are described in Whitwell, H. J. et al. [@Whitwell2018Apr] and are experimental. Work in this direction continues.
 
-1. По аналогии с паренклитическими сетями с использованием линейной модели, может быть использован подход с непосредственным присвоением ребру рассчитанного веса (взвешенные сети approach), либо может быть использован подход с использованием порогов (threshold approach). В последнем случае величина порога должна быть установлена эмпирически. 
+6. By analogy with parenclitic networks using a linear model, an approach with direct assignment of a calculated weight to an edge (weighted network approach) can be used, or an approach using threshold (threshold approach) can be used. In the latter case the threshold value must be established empirically.
 
-#### Синолитические сети (SA)
+#### Synolytic networks (SA)
 
-В основе синолитического подхода лежит выстраивание границы между классами с помощью того или иного классификатора. В качестве примера в литературе был рассмотрен метод опорных векторов (SVM) with the radial basis function kernel, а также логистическая регрессия [@Nazarenko2021Oct]. Однако может быть использован любой подходящий классификатор. 
+The synolytic approach is based on constructing the boundary between classes with the help of some classifier. The boundary must provide best separation between "normal" and "unnormal" units. For every pair of unit features a classifier is fitted to build such boundary and to relate the unit to one class or to another. The approach uses units both from "normal" and "unnormal" sets. In literature support vector machine (SVM) with the radial basis function kernel [@Krivonosov2022Jan], as well as logistic regression [@Nazarenko2021Oct], have been considered. However any suitable classifier may be used.
 
-Последовательность манипуляций при использовании синолитического подхода следующая:
+The sequence of manipulations when using the sinolytic approach is as follows:
 
-1. Используются экспериментальные единицы, относящиеся к классам "нормальных" и "аномальных" ("здоровых" и "больных"), а не только контрольная группа целиком из "нормальных" экспериментальных единиц. Фактически, данная группа представляет собой то, что традиционно понимается под обучающими данными. 
-
-2. Вновь определяются попарные комбинации характеристик. 
+1. Experimental units belonging to "normal" and "abnormal" classes are used. Pairwise feature combinations are determined again.
    
-3. Для каждой комбинации характеристик ($x$, $y$) с помощью классификатора определяется граница, разделяющая классы. Иными словами, для каждой комбинации создается отдельный классификатор, в попытке провести границу между классами. Визуально разделение может быть представлено следующим образом.
+2. For each combination of features ($x$, $y$), a classifier is used to construct the boundary that separates the classes. In other words, a separate classifier is created for each combination, in an attempt to draw a line or a curve between classes. 
 
 ![Figure 2](./images/2-rbf-boundary.png)
-**Figure 2.** Разделение двух классов (красные и синие) с помощью radial SVM. В связи с тем, что при синолитическом подходе используются единицы разных классов.  
+**Figure 2.** Separation of two classes (red and blue) using radial SVM. 
 
-4. С помощью классификатора определяется вероятность принадлежности каждой точки на плоскости ($x$, $y$) к тому или иному классу. Т.к. каждая точка обозначает отдельную экспериментальную единицу, полученные вероятности и становятся весами ребер между узлами, отражающими характеристики ($x$, $y$). Таким образом, каждая экспериментальная единица получает вес ребра между узлами ($x$, $y$).
+3. The classifier gives the probability of belonging of each unit to one class or another. The resulting probabilities become the weights of the edges between nodes($x$, $y$). Thus, each experimental unit receives the weight of an edge between nodes ($x$, $y$).
 
-1. Снова может иметь место два принципиальных подхода - взвешенный сеть подход, когда вес ребра является рассчитанной вероятностью или подход с использлванием порога, когда ребро будет построено в случае, если вероятность выше определенного порога. 
+4. Again, two principal approaches can take place - a network-weighted approach, where the weight of an edge is a calculated probability, or a thresholding approach, where an edge will be built if the probability is above a certain threshold.
 
-5. В результате, все экспериментальные единицы меняют свое представление на взвешенные графы. 
+5. As a result, all experimental units change their representation to weighted graphs.
 
-#### Корреляционные графы
+#### Correlation graphs and networks
 
-Корреляционные графы наиболее часто используются при возможности получить несколько последовательных измерений одних и тех же характеристик у одной и той же экспериментальной единицы. Если у нас есть множество таких экспериментальных единиц, у нас должна быть возможность проводить одно и то же количество таких последовательных измерений, а характеристики должны быть идентичными. 
+Correlation graphs are most often used when it is possible to obtain several consecutive measurements of the same features from the unit. If we have many such experimental units, we should be able to make the same number of such consecutive measurements, and the characteristics should be identical.
 
-В основе такой концепции лежит гипотеза Александра Горбаня [@Gorban2009May], согласно которой в некоей системе с множеством характеристик при условии стабильности имеются некие базисные корреляции и показатели дисперсии между характеристиками $(Cor, Var)$. С течением времени происходят случайные колебания корреляции и дисперсии, но они слабо отклоняются от базисных показателей.
+This concept is based on the hypothesis of Alexander Gorban [@Gorban2009May], according to which in a certain system with many features under the condition of stability there are certain baseline correlations and variance $(Cor, Var)$. Over time random fluctuations in correlations and variance occur but they deviate slightly from the baseline.
 
-При условии возникновения некоего "стресса" или воздействия в системе возрастает скоррелированность характеристик, а также дисперсия $(Cor \uparrow, Var \uparrow)$. 
+Under the condition of a certain "stress" or influence on the system, the correlation of features drastically increases, as well as the variance $(Cor \uparrow, Var \uparrow)$.
 
-В дальнейшем, система либо снова возвращается к стабильности (при этом мы будем наблюдать возвращение показателей корреляции и дисперсии до базисных значений $(Cor \downarrow, Var \downarrow)$, либо наступит этап дезадаптации (или кризиса), при котором корреляции значительно снижаются (в том числе ниже уровня базисных), а дисперсия остается большой или возрастает еще больше $(Cor \downarrow, Var \uparrow)$. 
+In the future the system either returns to stable state again (in this case we will observe the return of correlation and variance to baseline $(Cor \downarrow, Var \downarrow)$) or complete disadaptation (or crisis) will come, at which correlations are significantly reduced (including those below the baseline level), while the variance remains large or increases even more $(Cor \downarrow, Var \uparrow)$.
 
-Общая инструкция для построения корреляционного графа следующая.
+The general steps for constructing a correlation graph are as follows:
 
-1. Определяем характеристики экспериментальной единицы, между которыми мы будем попарно определять корреляции, например, $(A, B, C)$. По каждой из этих характеристик мы имеем набор значений во времени, временные точки должны совпадать.
+1. We determine the features of the experimental unit that are changing over time, for example, $(A, B, C)$. 
 
-1. Исследователи выбирают начальное временное "окно", например, измерения по характеристикам на момент времени $T$ и некий эмпирический размер этого окна. Предположим, величина окна выбрана в 20 временных точек. Тогда мы получаем 19 предшествующих временных точек по каждой характеристике и измерения на момент времени $T$ (т.е., всего 20 измерений). Соответственно, для характеристик $(A, B, C)$ мы получаем по 20 временных значений с учетом $T$ для каждой экспериментальной единицы:
+2. Researchers choose an initial "time window", for example, measurements at time $T$ and some empirical size of this window. Suppose the window size is chosen to be 20 time points. Then we get 19 previous time points and time $T$ for each feature measurements (i.e., 20 measurements in total):
 
-| Временная точка |     A     |     B     |     C     |
-| :-------------: | :-------: | :-------: | :-------: |
-|       $T$       |  $a_{0}$  |  $b_{0}$  |  $c_{0}$  |
-|    $T_{-1}$     | $a_{-1}$  | $b_{-1}$  | $c_{-1}$  |
-|    $T_{-2}$     | $a_{-2}$  | $b_{-2}$  | $c_{-2}$  |
-|       ...       |    ...    |    ...    |    ...    |
-|    $T_{-19}$    | $a_{-19}$ | $b_{-19}$ | $c_{-19}$ |
+| Time point |     A     |     b     |     c     |
+| :--------: | :-------: | :-------: | :-------: |
+|    $T$     |  $a_{0}$  |  $b_{0}$  |  $c_{0}$  |
+|  $T_{-1}$  | $a_{-1}$  | $b_{-1}$  | $c_{-1}$  |
+|  $T_{-2}$  | $a_{-2}$  | $b_{-2}$  | $c_{-2}$  |
+|    ...     |    ...    |    ...    |    ...    |
+| $T_{-19}$  | $a_{-19}$ | $b_{-19}$ | $c_{-19}$ |
 
-3. Временное окно и будет являться основой для будущего графа. Названия характеристик становятся узлами графа. Попарно между каждыми 2-мя характеристиками определяется корреляция и величина коэффициента корреляции становится атрибутом ребра между узлами. 
+1. The time window with features will be the basis for the future graph. The names of the features become the nodes of the graph. Next we calculate pairwise correlations between all the features. The correlation coefficient becomes the edge weight between the nodes.
 
-6. Метод оценки корреляции напрямую связан с типами подлежащих распределений характеристик и гипотез исследователей. В целом, для создания корреляционных графов могут быть использованы метод по Пирсону, по Спирману, Cramer's V, Tau и другие. 
+2. The method of estimating the correlation is directly related to the types of underlying distributions of characteristics and hypotheses of researchers. In general, the Pearson, Spearman, Cramer's V, Tau and others methods can be used to create correlation graphs.
    
-7. Отдельно стоит уделить внимание значимости корреляционной связи. При отсутствии значимой корреляции логичным представляется не строить ребро между соответствующими узлами, в то время как наличие значимой корреляции позволяет построить ребро и присвоить ему вес в виде корреляционного коэффициента. Такой подход сочетает в себе элементы и взвешенных графов, и построение ребер на основании порога (в данном случае порог - уровень значимости). 
+3. It is worth paying attention to the significance of the correlation. In the absence of a significant correlation, it seems logical not to build an edge between the corresponding nodes, while the presence of a significant correlation allows you to build an edge and assign weight to it. This approach combines from both weighted graphs approach and the threshold approach (in this case the threshold is the level of significance).
 
-8. Таким образом, мы получили корреляционный граф на момент времени $T$. 
+4. Thus, we have obtained a correlation graph at time $T$.
    
-9.  Следующий этап - "переезд" окна на 1 период времени вперед - на $T_{+1}$. После чего происходит построение графа уже для этого момента времени. Порядок манипуляций аналогичен, повторяется последовательность 3. - 5. Создается новый граф для момента времени $T_{+1}$ и так далее. 
+5. The next stage is to "move" the whole window forward by 1 time period - to $T_{+1}$. After that the graph is built already for this timepoint. The order of manipulations is similar, the sequence of points 3). - 5). is repeated. Similar a new graph is created for the time $T_{+1}$, "time window" moves to the enxt point  and so on.
 
-### После построения графов
+### Further manipulations with networks
 
-Мы получаем новое представление экспериментальных единиц. Дальнейшие манипуляции сводятся к тому, что сети как структуры имеют ряд собственных характеристик.
+As we transformed the presentation of units into graphs, further manipulations are connected with analysing network structures of graphs.
 
-В литературе встречаются следующие подходы к анализу данных характеристик:
+The following approaches are found in the literature:
 
-- вычисление описательных статистик (минимум, максимум, среднее, дисперсия, коэффициент вариации) of the main network characteristics closeness, betweenness, edge betweenness, page rank, eigen centrality, authority score, strength, edge weights;
-- вычисление количества значений "0" по каждому из этих показателей, где это возможно;
-- при разумном количестве характеристик, которые являются вершинами графов - значения валентности по каждой вершине во взвешенном графе;
-- вычисление описательных статистик (максимум, среднее, дисперсия) для shortest
-path lengths;
-- дистанции между вершинами взвешенного графа, максимальная и минимальная, среднее;
+- calculation of descriptive statistics (minimum, maximum, mean, variance, coefficient of variation) of the main network characteristics closeness, betweenness, edge betweenness, page rank, eigen centrality, authority score, strength, edge weights;
+- calculation of the number of "0" values for each of these characteristics where appropriate;
+- with a reasonable number of graph vertices - raw degree values for each vertex in the weighted graph;
+- calculation of descriptive statistics (maximum, mean, variance) for shortest path lengths;
+- distances between the vertices of the weighted graph (maximum and minimum, average);
 - calculation of various matrix norms for the graph, e.g. $L_1$-norm;
-- calculation of number of principal components using principal component analysis with fixed value of explained variance;
-- иные показатели, которые помогут максимально разделить единицы в виде графов на классы;
+- calculation of the number of principal components using principal component analysis with fixed value of explained variance;
+- other indicators that will help to separate the graphs into classes;
 
-Другим направлением может быть анализ подграфов, например, minimal spanning trees or weight-inverted minimal spanning trees. 
-Способы, которые мы обсуждали ранее, позволяют в случае подходов с порогом построить ребра графа при превышении этого самого порога, таким образом, графы, представляющие единицы, не являющиеся "нормальными" или здоровыми, будут скорее всего иметь больше ребер, чем графы "здоровых" или нормальных единиц. 
+Another direction could be subgraph analysis, such as minimal spanning trees or weight-inverted minimal spanning trees.
 
-Аналогично, при использовании подхода со взвешенными графами, наибольшие значения весом должны иметь графы,  не являющиеся "нормальными" или здоровыми. Даже в случае корреляционного подхода мы ожидаем, что веса будут большими, и самих ребер будет больше за счет значимых корреляций. 
+The methods we discussed earlier imply that "unnormal" units will have more edges in graphs in case of threshold approach or larger edge weights in case of weighted approach. The key point is to determine the features that contribute most to the differences between "normal" and "unnormal" groups.
 
-Таким образом, представляет большой интерес изучение свойств weight-inverted minimal spanning tree. Как получить такое дерево? Для каждого графа необходимо рассчитать обратные веса ребер, или $\frac{1}{w}$, а затем для такого графа построить минимальное остовное дерево, после чего пересчитать значения весов на прямые. Очевидно, что данный подход наиболее выгоден при построениии взвешенных графов, либо при комбинации взвешенного и порогового подходов. 
+One of the approaches is a concept of weight-inverted minimal spanning tree. How to get such a tree? For each graph it is necessary to calculate the inverse weights of the edges, or $\frac{1}{w}$, and then build a minimum spanning tree for such a graph, next recalculate the values of the weights back. Obviously this approach is most beneficial when constructing weighted graphs, or when using a combination of weighted and threshold approaches.
 
-В weight-inverted minimal spanning tree должны остаться вершины, связанные ребрами, по которым данная экспериментальная единица наиболее отличается от "нормальных". 
+The weight-inverted minimal spanning tree should contain vertices connected by edges along which the given experimental unit differs most from the "normal" ones. This can help the researches to find the features that differ mostly from the "normal" ones. This approach takes into account the multidimensional relations between the features.
 
 ![](./images/span-trees-weighted-full-graph.png)
 **Figure 2.** a) Original weighted graph. b) Inverse-weighted graph. c) Minimal spanning tree for the original graph d) Weight-inverted minimal spanning tree.
 
-Для таких деревьев возможны также вышеупомянутые расчеты характеристик, однако стоит помнить, что у подграфов количество вершин может отличаться от первоначального графа и от других подграфов. 
+For such trees, the above graph characteristics calculations are possible, but it is worth taking into consideration that the number of vertices for subgraphs may differ from the original graph and from other subgraphs.
 
 ## Notes
 
