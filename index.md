@@ -29,6 +29,7 @@
 ## Code samples and scripts
 
 - [Code samples and scripts](https://github.com/aysuvorov/medstats)
+- Notebooks with data experiments
 
 ## Network analysis and graphs
 
