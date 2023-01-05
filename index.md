@@ -13,7 +13,6 @@
 - [Network analysis and graphs](#network-analysis-and-graphs)
 - [Basics of meta-analysis](#basics-of-meta-analysis)
 - [Design of experiments, Clinical Trials and Biostatistics](#design-of-experiments-clinical-trials-and-biostatistics)
-- [Publications, patents and conference presentations](#publications-patents-and-conference-presentations)
 - [Misc](#misc)
 
 ---
@@ -21,6 +20,11 @@
 ## About me
 
 - [CV and skills](./docs/promotion/cv/cv_raw.html)
+
+**Publications, patents and conference presentations**
+
+- [ORCID list](https://orcid.org/0000-0002-2224-0019)
+- [Full list (unsorted)](./docs/promotion/cv/pub_list_total.md)
 
 ## Code samples and scripts
 
@@ -37,12 +41,6 @@
 ## Design of experiments, Clinical Trials and Biostatistics
 
   - [Hypothesis testing concepts](./docs/pages/doe/hyp_test/index.md)
-
-
-## Publications, patents and conference presentations
-
-- [ORCID list](https://orcid.org/0000-0002-2224-0019)
-- [Full list (unsorted)](./docs/promotion/cv/pub_list_total.md)
 
 ## Misc
 
