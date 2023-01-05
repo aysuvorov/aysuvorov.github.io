@@ -10,8 +10,11 @@
 
 - [About me](#about-me)
 - [Code samples and scripts](#code-samples-and-scripts)
+- [Network analysis and graphs](#network-analysis-and-graphs)
+- [Basics of meta-analysis](#basics-of-meta-analysis)
+- [Design of experiments, Clinical Trials and Biostatistics](#design-of-experiments-clinical-trials-and-biostatistics)
 - [Publications, patents and conference presentations](#publications-patents-and-conference-presentations)
-- [Educational materials](#educational-materials)
+- [Misc](#misc)
 
 ---
 
@@ -23,25 +26,25 @@
 
 - [Code samples and scripts](https://github.com/aysuvorov/medstats)
 
+## Network analysis and graphs
+
+- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
+
+## Basics of meta-analysis
+
+- [Basics of meta-analysis](./docs/pages/meta/index.md)
+
+## Design of experiments, Clinical Trials and Biostatistics
+
+  - [Hypothesis testing concepts](./docs/pages/doe/hyp_test/index.md)
+
+
 ## Publications, patents and conference presentations
 
 - [ORCID list](https://orcid.org/0000-0002-2224-0019)
 - [Full list (unsorted)](./docs/promotion/cv/pub_list_total.md)
 
-## Educational materials
-
-**Clinical trials**
-
-- Design of experiments, Clinical Trials and Biostatistics
-  - [Hypothesis testing concepts](./docs/pages/doe/hyp_test/index.md)
-- Meta-analysis
-  - [Basics of meta-analysis](./docs/pages/meta/index.md)
-
-**Data science**
-
-- [Network complex methods](./docs/pages/networks/paren_syn_corr_guide/index.md)
-
-**Miscellaneous**
+## Misc
 
 - [Understanding ROC - analysis](./docs/pages/misc/roc_anal/index.md)
 
