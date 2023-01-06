@@ -28,7 +28,12 @@
 
 ## Code samples and scripts
 
-- Demo projects
+**Demo projects**
+
+- [Classification and feature selection with Lasso / simple PyTorch classifier](https://www.kaggle.com/code/aleksandrsuvorov/notebook7e545af478)
+
+**Python / R scripts and functions**
+
 - [Functions and scripts](https://github.com/aysuvorov/medstats)
 
 ## Network analysis and graphs
