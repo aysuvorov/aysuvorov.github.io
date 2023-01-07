@@ -30,7 +30,8 @@
 
 **Demo projects**
 
-- [Classification and feature selection with Lasso / simple PyTorch classifier](https://www.kaggle.com/code/aleksandrsuvorov/notebook7e545af478)
+- [Classification and feature selection with Lasso](https://www.kaggle.com/aleksandrsuvorov/demo-quark-lasso-p1-6-01-2023)
+- [Simple PyTorch classifier with loss curves](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-p2-6-01-2023)
 
 **Python / R scripts and functions**
 
