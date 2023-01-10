@@ -46,7 +46,6 @@
 
 ## Network analysis and graphs
 
-- [Network methods for biological systems](./docs/pages/networks/paren_syn_corr_guide/index.html)
 - [Network methods for biological systems](./docs/pages/networks/paren_syn_corr_guide/index.md)
 
 ## Basics of meta-analysis
