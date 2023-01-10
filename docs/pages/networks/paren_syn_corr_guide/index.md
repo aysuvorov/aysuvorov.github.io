@@ -154,7 +154,7 @@ The parenclitic approach bases on the hypothesis that there is a linear relation
 
      $$
      \begin{equation}
-     abs(z_i) = \frac{\|\epsilon_i - \hat{\epsilon}_{CTRL}\|}{\sigma(\epsilon_{CTRL})}
+     abs(z_i) = abs(\frac{\epsilon_i - \hat{\epsilon}_{CTRL}}{\sigma(\epsilon_{CTRL})})
      \end{equation}
      $$
 
