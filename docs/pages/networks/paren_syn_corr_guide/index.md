@@ -29,13 +29,25 @@ MathJax = {
   <img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" />
 </p>
 
-Aleksandr Suvorov
+Overview of works [M. Zanin](https://orcid.org/0000-0002-5839-0393), [A. Gorban](https://orcid.org/0000-0001-6224-1430), [A. Zaikin](https://orcid.org/0000-0001-7540-1130), [H. Whitwell](https://orcid.org/0000-0001-8987-4158), [M. Krivonisov](https://orcid.org/0000-0002-1169-5149), [T. Nazarenko](https://orcid.org/0000-0002-4245-7346) 
+
+by Aleksandr Suvorov
 
 5.01.2023
 
 ## Abstract
 
+Network analysis provides great opportunities for modelling complex biological systems. There are different approaches for modelling such systems with network and in this article we will consider some basic usefull approaches. The main idea is focused on building pipelines whrer individual units are represented as graphs. The construction of such pipelines can make it possible to solve problems of classification, regression, and analyzштп dynamic changes in biological systems. 
+
+We will discuss common approaches for different tasks. The chapter contains the instruction for building graphs step by step focusing on the strengths and weaknesses of a particular approach.
+
+Network analysis can become one of the leading method for building explainable artificial intelligence (AI) models. 
+
+The method is highly perspective due to the available and wide visualization tools, as well as analytical instruments based on the topological properties of graphs.
+
 ### Key words
+
+Networks, network analysis, graphs, machine learning, artificial intelligence, complex models, correlation, statistical modelling, classification, regression
 
 ## Introduction
 
@@ -57,7 +69,7 @@ The most important question is of choosing the most representative descriptive m
 
 Nodes represent features of the experimental unit. They can be ranked, and then their weight will be different (on the chart, nodes with different weights have different sizes). The edges weights characterize a certain assessment of the relations between the nodes. The thickness of the edges on the graph is proportional to the weights. The connection may be completely absent (on the graph - nodes A and C, A and G), then the edge is not built.
 
-![Primer of weighted graph](./images/1.0-weighted-graph.png)
+![Primer of weighted graph](./images/Figure-1-weighted-graph.png)
 **Figure 1.** An example of a weighted graph. 
 Vertices and edges have a size and thickness based on their weights.
 
@@ -158,15 +170,15 @@ The parenclitic approach bases on the hypothesis that there is a linear relation
 
 7. Next, we get some experimental unit $i$ that is of interest to us. We substitute the values of the features ($x_i$, $y_i$) into the already obtained linear regression equations and obtain its own value $\epsilon_i$. Further,  we calculate absolute Z-score from formula (3). We repeat the prossess for every new experimental unit.
 
-![](./images/lm-regr-graph.png)
-Linear regression between features ($x$, $y$). Each blue dot represents an experimental unit. The regression residuals are green or red. The gray lines show the boundaries of the threshold. If the normalized absolute values of the residuals do not exceed the threshold, they are colored green. When the threshold is exceeded, the residuals are colored red.
+![Figure 2](./images/Figure-2-lm-regr-graph.png)
+**Figure 2.** Linear regression between features ($x$, $y$). Each blue dot represents an experimental unit. The regression residuals are green or red. The gray lines show the boundaries of the threshold. If the normalized absolute values of the residuals do not exceed the threshold, they are colored green. When the threshold is exceeded, the residuals are colored red.
 
 1. From each experimental unit, a graph $G(V, E)$ is constructed, the features become the set of nodes $V$, and $E$ - the set of edges. If the calculated value $abs(z_i)$ for a pair of nodes ($x$, $y$) is greater than or equal to a certain threshold, an edge is built. If the value is less than the threshold, there is no edge. Thus, units similar to the control group should have small $abs(z_i)$ and graphs representing theese units will have few edges. Units highly deviating from control group will have large $abs(z_i)$ and more constructed edges: if the residual is very large, the unit differs from the control group and does not obey the calculated linear relationship, and the edge will be built.
 
 The main challenge is in the determining the threshold. In the work of M.Zanin and S.Bocaletti [@Zanin2011Sep] the threshold was taken as $abs(z)$ = 2.
 
-![Figure 1](./images/threshold-graph.png)
-**Figure 1.** An example of a graph with threshold values for a hypothetical experimental unit of a parenclitic network. Edges corresponding to $abs(z)$ below threshold 2 are not built (sharp red dotted line). Edges that correspond to $abs(z)$ greater than or equal to 2 are built (bright blue). The indicated numbers do not correspond to the weight of the edge, just to the calculated $abs(z)$.
+![Figure 3](./Figure-3-images/threshold-graph.png)
+**Figure 3.** An example of a graph with threshold values for a hypothetical experimental unit of a parenclitic network. Edges corresponding to $abs(z)$ below threshold 2 are not built (sharp red dotted line). Edges that correspond to $abs(z)$ greater than or equal to 2 are built (bright blue). The indicated numbers do not correspond to the weight of the edge, just to the calculated $abs(z)$.
 
 #### Weighted parenclitic networks using linear model (wLRPA)
 
@@ -176,8 +188,8 @@ The need of the threshold raises large number of challenges. One way to get rid 
 
 2. Since there is no threshold, all edges of the graph are constructed, but each edge is assigned a weight equal to the corresponding value of the absolute deviation $abs(z)$. The resulting graphs are weighted.
 
-![Figure 1](./images/weighted-full-graph.png)
-**Figure 1.** An example of a weighted graph of a hypothetical experimental unit of a parenclitic network. The weight of the edge and the edge thickness corresponds to $abs(z)$.
+![Figure 4](./images/Figure-4-weighted-full-graph.png)
+**Figure 4.** An example of a weighted graph of a hypothetical experimental unit of a parenclitic network. The weight of the edge and the edge thickness corresponds to $abs(z)$.
 
 #### Parenclitic networks using nuclear density estimation (wKDEPA)
 
@@ -189,8 +201,8 @@ When using linear regression method for the construction of parenclitic graphs, 
 
 3. On the constructed contour matrix, the point with the highest density becomes the so-called center.
 
-![Figure 1](./images/kde-topo.png)
-An example of a contour density matrix for features ($x$, $y$). Red dots show individual experimental units. The center or point with the highest density is represented by a green diamond.
+![Figure 5](./images/Figure-5-kde-topo.png)
+**Figure 5.** An example of a contour density matrix for features ($x$, $y$). Red dots show individual experimental units. The center or point with the highest density is represented by a green diamond.
 
 4. Generally, for each experimental unit $i$ with coordinates by features [$x_i$, $y_i$] on the contour matrix, we calculate the distance from the center of the matrix to the coordinate point. Euclidean or Mahalanobis distance are popular approaches. The distance can serve as a raw edge weight for this unit. More complex idea is to estimate the volume under the densities that are higher than the density where the point is within the distribution.
 
@@ -208,8 +220,8 @@ The sequence of manipulations when using the sinolytic approach is as follows:
    
 2. For each combination of features ($x$, $y$), a classifier is used to construct the boundary that separates the classes. In other words, a separate classifier is created for each combination, in an attempt to draw a line or a curve between classes. 
 
-![Figure 2](./images/2-rbf-boundary.png)
-**Figure 2.** Separation of two classes (red and blue) using radial SVM. 
+![Figure 6](./images/Figure-6-rbf-boundary.png)
+**Figure 6.** Separation of two classes (red and blue) using radial SVM. 
 
 3. The classifier gives the probability of belonging of each unit to one class or another. The resulting probabilities become the weights of the edges between nodes($x$, $y$). Thus, each experimental unit receives the weight of an edge between nodes ($x$, $y$).
 
@@ -274,8 +286,8 @@ One of the approaches is a concept of weight-inverted minimal spanning tree. How
 
 The weight-inverted minimal spanning tree should contain vertices connected by edges along which the given experimental unit differs most from the "normal" ones. This can help the researches to find the features that differ mostly from the "normal" ones. This approach takes into account the multidimensional relations between the features.
 
-![](./images/span-trees-weighted-full-graph.png)
-**Figure 2.** a) Original weighted graph. b) Inverse-weighted graph. c) Minimal spanning tree for the original graph d) Weight-inverted minimal spanning tree.
+![Figure 7](./images/Figure-7-span-trees-weighted-full-graph.png)
+**Figure 7.** a) Original weighted graph. b) Inverse-weighted graph. c) Minimal spanning tree for the original graph d) Weight-inverted minimal spanning tree.
 
 For such trees, the above graph characteristics calculations are possible, but it is worth taking into consideration that the number of vertices for subgraphs may differ from the original graph and from other subgraphs.
 
