@@ -2,10 +2,11 @@
 title: Dynamic and thermodynamic models of adaptation
 bibliography: references.bib
 csl: jama.csl
-output: html_document
-css: /home/guest/Документы/aysuvorov.github.io/assets/css/style.min.css
+output: word_document
 ---
 
+<!-- <link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" /> -->
+<!-- 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
@@ -19,20 +20,12 @@ MathJax = {
 </script>
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+</script> -->
+
+<!-- pandoc -s _Dynamic_models_10_01_2023.md -o _Dynamic_models_10_01_2023.docx --citeproc -->
 
 
 ## Dynamic and thermodynamic models of adaptation
-
-<p align="center">
-  <img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" />
-</p>
-
-Overview of works [M. Zanin](https://orcid.org/0000-0002-5839-0393), [A. Gorban](https://orcid.org/0000-0001-6224-1430), [A. Zaikin](https://orcid.org/0000-0001-7540-1130), [H. Whitwell](https://orcid.org/0000-0001-8987-4158), [M. Krivonisov](https://orcid.org/0000-0002-1169-5149), [T. Nazarenko](https://orcid.org/0000-0002-4245-7346) 
-
-by Aleksandr Suvorov
-
-5.01.2023
 
 ## Abstract
 
