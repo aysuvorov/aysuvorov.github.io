@@ -30,9 +30,15 @@
 
 **Demo projects**
 
-- [Classification and feature selection with Lasso](https://www.kaggle.com/aleksandrsuvorov/demo-quark-lasso-p1-6-01-2023)
-- [Simple PyTorch classifier with loss curves](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-p2-6-01-2023)
-- [Automated selection of model and its hyperparameters with `optuna` library (example with PyTorch)](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-optuna-p3-6-01-2023)
+- Machine learning basics
+
+  - [Basic feature selection and hyperparameter tuning (`optuna`) with Lasso classifier](https://www.kaggle.com/aleksandrsuvorov/demo-quark-lasso-p1-6-01-2023)
+  - [Basic PyTorch classifier with loss curves estimation](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-p2-6-01-2023)
+  - [Hyperparameter tuning (`optuna`) for PyTorch classifier](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-optuna-p3-6-01-2023)
+
+- Network analysis
+
+  - [Basic graph construction]
 
 **Python / R scripts and functions**
 
