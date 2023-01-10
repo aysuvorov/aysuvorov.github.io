@@ -47,7 +47,7 @@
 ## Network analysis and graphs
 
 - [Network methods for biological systems](./docs/pages/networks/paren_syn_corr_guide/index.html)
-- [Network methods for biological systems](https://github.com/aysuvorov/aysuvorov.github.io/blob/3d6fcd7fc459831f3df958ce31b3df6584fb37cb/docs/pages/networks/paren_syn_corr_guide/index.html)
+- [Network methods for biological systems](./docs/pages/networks/paren_syn_corr_guide/index.md)
 
 ## Basics of meta-analysis
 

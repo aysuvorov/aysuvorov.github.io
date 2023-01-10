@@ -3,7 +3,6 @@ title: Dynamic and thermodynamic models of adaptation
 bibliography: references.bib
 csl: jama.csl
 output: html_document
-css: /home/guest/Документы/aysuvorov.github.io/assets/css/style.min.css
 ---
 
 <script type="text/javascript" id="MathJax-script" async
