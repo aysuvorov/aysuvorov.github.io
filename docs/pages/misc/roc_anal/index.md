@@ -1,8 +1,8 @@
 # Understanding ROC - analysis
 
-<p align="center">
-  <img src="https://i.pinimg.com/564x/d3/48/41/d348411781b7c7af9ddbaacc8eb8e9ae.jpg" />
-</p>
+
+<img src="https://i.pinimg.com/564x/d3/48/41/d348411781b7c7af9ddbaacc8eb8e9ae.jpg" style="display: block; margin: 0 auto"/>
+
 
 - [Understanding ROC - analysis](#understanding-roc---analysis)
   - [Error matrix](#error-matrix)

@@ -23,9 +23,7 @@ MathJax = {
 
 ## Dynamic and thermodynamic models of adaptation
 
-<p align="center">
-  <img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" />
-</p>
+<img src="https://i.pinimg.com/564x/85/0e/fa/850efa7658673ea37edfdbece9e44641.jpg" style="display: block; margin: 0 auto"/>
 
 Overview of works [M. Zanin](https://orcid.org/0000-0002-5839-0393), [A. Gorban](https://orcid.org/0000-0001-6224-1430), [A. Zaikin](https://orcid.org/0000-0001-7540-1130), [H. Whitwell](https://orcid.org/0000-0001-8987-4158), [M. Krivonisov](https://orcid.org/0000-0002-1169-5149), [T. Nazarenko](https://orcid.org/0000-0002-4245-7346) 
 

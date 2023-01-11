@@ -17,9 +17,9 @@ MathJax = {
 
 # Basics of meta-analysis
 
-<p align="center">
-  <img src="https://i.pinimg.com/564x/3b/1a/ce/3b1ace5f8c5f8f1574bc6298a4018ec8.jpg" />
-</p>
+
+<img src="https://i.pinimg.com/564x/3b/1a/ce/3b1ace5f8c5f8f1574bc6298a4018ec8.jpg"  style="display: block; margin: 0 auto"/>
+
 
 - [Basics of meta-analysis](#basics-of-meta-analysis)
   - [What is meta-analysis?](#what-is-meta-analysis)
