@@ -1,6 +1,8 @@
 # Materials to read
 
-<img src="https://i.pinimg.com/564x/14/23/4c/14234c149ddbb3910f6cb5ebafdeec0e.jpg" class="center"/>
+<p style="text-align:center;"><img 
+  src="https://i.pinimg.com/564x/14/23/4c/14234c149ddbb3910f6cb5ebafdeec0e.jpg" class="center"/>
+</p>
 
 A collection of materials to dive into modern analytics.
 
