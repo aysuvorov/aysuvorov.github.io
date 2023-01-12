@@ -33,9 +33,9 @@
   - [Basic PyTorch classifier with loss curves estimation](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-p2-6-01-2023)
   - [Hyperparameter tuning (`optuna`) for PyTorch classifier](https://www.kaggle.com/aleksandrsuvorov/demo-quark-torch-optuna-p3-6-01-2023)
 
-- Network analysis
+- Network analysis and machine /deep learning
 
-  - [Basic graph construction]
+  - [Graph classification with CNN (matrix approach)](https://www.kaggle.com/aleksandrsuvorov/demo-cf-12-01-2023)
 
 **Python / R scripts and functions**
 
