@@ -51,7 +51,9 @@
 
 ## Design of experiments, Clinical Trials and Biostatistics
 
-  - [Hypothesis testing concepts](./docs/pages/doe/hyp_test/index.md)
+  - [Hypothesis testing concepts](https://www.sechenovmedj.com/jour/article/view/439/213)
+  - [Basic principles of descriptive statistics  in medical research](https://www.sechenovmedj.com/jour/article/view/397/193)
+<!--   (./docs/pages/doe/hyp_test/index.md) -->
 
 ## Misc
 
