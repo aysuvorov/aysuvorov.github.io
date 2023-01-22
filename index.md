@@ -21,7 +21,7 @@
 **Publications, patents and conference presentations**
 
 - [ORCID list](https://orcid.org/0000-0002-2224-0019)
-- [Full list (unsorted)](./docs/promotion/cv/pub_list_total.md)
+- [Full list (unsorted)](https://docs.google.com/document/d/1fLcsbwFEyAIjw0sF4WWyCpvvR30IT4mOeO1zk8qVOYk/edit?usp=sharing)
 
 ## Code samples and scripts
 
