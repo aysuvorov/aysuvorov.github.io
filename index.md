@@ -16,7 +16,7 @@
 
 ## About me
 
-- [CV and skills](./docs/promotion/cv/cv_raw.html)
+- [CV and skills](https://docs.google.com/document/d/1veG-hVFJTulPfXYiyKbO0EDCR99zSxtChhU-HwSjMAM/edit?usp=sharing)
 
 **Publications, patents and conference presentations**
 
