@@ -62,4 +62,4 @@
 
 ## Sechenov University
 
-- [Form aggregator](./docs/pages/form_aggregator/form_aggregator_sechenov.md)
+- [Form aggregator](./docs/form_aggregator/form_aggregator_sechenov.md)
