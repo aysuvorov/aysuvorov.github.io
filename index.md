@@ -11,6 +11,7 @@
 - [Basics of meta-analysis](#basics-of-meta-analysis)
 - [Design of experiments, Clinical Trials and Biostatistics](#design-of-experiments-clinical-trials-and-biostatistics)
 - [Misc](#misc)
+- [Sechenov University](#sechenov-university)
 
 ---
 
@@ -63,3 +64,5 @@
 ## Sechenov University
 
 - [Form aggregator](./docs/form_aggregator/form_aggregator_sechenov.md)
+
+[sample](./docs/pages/_private/tasks/index.md)
