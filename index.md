@@ -65,4 +65,4 @@
 
 - [Form aggregator](./docs/form_aggregator/form_aggregator_sechenov.md)
 
-[sample](./docs/pages/private/tasks/index.md)
+<!-- [sample](./docs/pages/private/tasks/index.md) -->
