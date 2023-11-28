@@ -1,4 +1,19 @@
 
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 <img src="https://i.pinimg.com/564x/d6/0d/56/d60d56d0590e41ae363f42da31127a50.jpg" style="display: block; margin: 0 auto"/>
 
 ## Задания
