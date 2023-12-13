@@ -28,7 +28,9 @@ MathJax = {
 1. Скачать таблицу с данными [data](./df_maga.txt)
 2. Переменные
 
-> group sex risk_sum_age_pre40 risk_score_category risk_score2_category risk_score2or_category risk_smart_category risk_advance_category smoking svd_amnesis menopause dm1 dm2 dm3 trt_hypoglik trt_insulin obesity dm_angioprthy ag_angiopathy chd angi angi_fc trt_statins trt_monoclol stroke_tia piks anemia chf gout gastritis asthma copd ag ag_control af aextr vextr atachy vtachy vpv ssu av_block trt_aarithm trt_ccb_nondyhidr trt_sota_meto trt_cordaron trt_allap trt_nitro trt_beta trt_ccb_dyhidr trt_apfinh trt_ara trt_diur trt_alpha_beta trt_iva trt_allopur trt_omnik trt_warf trt_dabi trt_riva trt_apix trt_asp trt_clop trt_tica trt_digo cckd albuminurea cancer pht rythm aort_valve tricus_valve mitral_valve dd artery_age
+```
+group sex risk_sum_age_pre40 risk_score_category risk_score2_category risk_score2or_category risk_smart_category risk_advance_category smoking svd_amnesis menopause dm1 dm2 dm3 trt_hypoglik trt_insulin obesity dm_angioprthy ag_angiopathy chd angi angi_fc trt_statins trt_monoclol stroke_tia piks anemia chf gout gastritis asthma copd ag ag_control af aextr vextr atachy vtachy vpv ssu av_block trt_aarithm trt_ccb_nondyhidr trt_sota_meto trt_cordaron trt_allap trt_nitro trt_beta trt_ccb_dyhidr trt_apfinh trt_ara trt_diur trt_alpha_beta trt_iva trt_allopur trt_omnik trt_warf trt_dabi trt_riva trt_apix trt_asp trt_clop trt_tica trt_digo cckd albuminurea cancer pht rythm aort_valve tricus_valve mitral_valve dd artery_age
+```
 
 являются факторами / категориальными, остальные - количественными.
 
@@ -80,7 +82,6 @@ MathJax = {
 
 В идеале, вы должны написать  функцию (или группу вложенных функций с некоей основной функцией), которая берет таблицу `pandas` или `r-data-frame/tibble` и выдает таблицу с рассчитанными статистиками. 
 
-1. 
 
 ### Задание 1
 
