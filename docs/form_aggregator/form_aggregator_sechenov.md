@@ -2,7 +2,7 @@
 
 ![logo](https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-08.png)
 
-<h2 style="text-align: center;">Отдел исследовательских сервисов Управления по научному развитию Сеченовского Университета</h2>
+<h3 style="text-align: center;">Отдел исследовательских сервисов Управления по научному развитию Сеченовского Университета</h3>
 
 
 
