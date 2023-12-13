@@ -20,14 +20,14 @@ MathJax = {
 
 **Инженеры**
 
-- курс по математической статистике: https://youtube.com/playlist?list=PLVEhMH4rmwDzBtS2gGnKFhMrJVz7YmWao&feature=shared
-- курс по дизайну исследований и экспериментов: https://youtube.com/playlist?list=PLVEhMH4rmwDyUOODK7mVq1T3tZJV46Dbq&feature=shared
-- курс по машинному обучению без нейросетей (классический) https://ods.ai/tracks/mlcourse_ai 
-- курс по нейросетям (классический) https://dlcourse.ai/
+- [курс по математической статистике](https://youtube.com/playlist?list=PLVEhMH4rmwDzBtS2gGnKFhMrJVz7YmWao&feature=shared)
+- [курс по дизайну исследований и экспериментов](https://youtube.com/playlist?list=PLVEhMH4rmwDyUOODK7mVq1T3tZJV46Dbq&feature=shared)
+- [курс по машинному обучению без нейросетей (классический)](https://ods.ai/tracks/mlcourse_ai)
+- [курс по нейросетям (классический)](https://dlcourse.ai/)
 
 **Неинженеры (все без исключения)**:
 
-- курс по математической статистике: https://youtube.com/playlist?list=PLVEhMH4rmwDzBtS2gGnKFhMrJVz7YmWao&feature=shared
-- курс по дизайну исследований и экспериментов: https://youtube.com/playlist?list=PLVEhMH4rmwDyUOODK7mVq1T3tZJV46Dbq&feature=shared
-- курс по R для исследователей https://stepik.org/course/497/promo
+- [курс по математической статистике](https://youtube.com/playlist?list=PLVEhMH4rmwDzBtS2gGnKFhMrJVz7YmWao&feature=shared)
+- [курс по дизайну исследований и экспериментов](https://youtube.com/playlist?list=PLVEhMH4rmwDyUOODK7mVq1T3tZJV46Dbq&feature=shared)
+- [курс по R для исследователей](https://stepik.org/course/497/promo)
 
