@@ -6,5 +6,5 @@
 
 
 
-<button onclick="location.href='https://forms.yandex.com/u/655f235143f74f099596f529/'" type="button">
-         Заявка на консультацию для аспирантов и соискателей Сеченовского Университета</button>
+<button onclick="location.href='https://forms.yandex.ru/u/62bd78e5fbd1c355d8a522c4/'" type="button">
+         Заявки на консультацию Сервиса поддержки публикационной активности</button>
