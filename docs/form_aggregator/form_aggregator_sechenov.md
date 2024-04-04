@@ -15,5 +15,5 @@
 
 <div class="wrapper">
     <button onclick="location.href='https://forms.yandex.ru/u/62bd78e5fbd1c355d8a522c4/'" type="button">
-            Заявки на консультацию Сервиса поддержки публикационной активности</button>
+            Подать заявку</button>
 </div>
