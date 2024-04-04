@@ -1,3 +1,4 @@
+<style>
 .wrapper {
     text-align: center;
 }
@@ -6,6 +7,7 @@
     position: absolute;
     top: 50%;
 }
+</style>
 
 
 ![logo](https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-08.png)
