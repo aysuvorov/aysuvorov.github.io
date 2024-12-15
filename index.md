@@ -61,8 +61,4 @@
 - [Understanding ROC - analysis](./docs/pages/misc/roc_anal/index.md)
 - [Library and useful links](./docs/pages/to_read/index.md)
 
-## Sechenov University
-
-- [Form aggregator](./docs/form_aggregator/form_aggregator_sechenov.md)
-
 <!-- [sample](./docs/pages/private/tasks/index.md) -->
