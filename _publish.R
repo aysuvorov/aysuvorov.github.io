@@ -26,6 +26,7 @@ for (fmt in c('html_book', 'tufte_html_book')) {
 }
 unlink('_book', recursive = TRUE)
 
+
 # default formats
 formats = c(
   'bookdown::pdf_book', 'bookdown::epub_book', 'bookdown::gitbook'
