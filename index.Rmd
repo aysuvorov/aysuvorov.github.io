@@ -1,12 +1,15 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Анализ данных в биомедицинских исследованиях"
+author: "`r ifelse(knitr::is_latex_output(), 'Суворов Александр Юрьевич', 'Вергун Мария Андреевна'"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
+fontsize: '12pt'
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.85"
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
