@@ -49,33 +49,3 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
-
-
-```{r setup, include=FALSE}
-
-library(readxl)
-library(writexl)
-library(tidyverse)
-library(rstatix)
-library(DescTools)
-library(gtsummary)
-
-library(tidymodels)
-library(survival)
-library(survminer)
-
-library(ggpubr)
-library(kableExtra)
-
-library(mice)
-
-library(pROC)
-
-source("https://raw.githubusercontent.com/aysuvorov/medstats/master/R_scripts/medstats.R")
-
-knitr::opts_chunk$set(
-  echo = FALSE,      # Hide code by default
-  warning = FALSE,   # Suppress warnings
-  message = FALSE    # Suppress messages
-)
-```

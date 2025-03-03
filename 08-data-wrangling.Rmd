@@ -16,26 +16,26 @@
 
 #### Примеры:
 - **R:**
-  ```r
-  # Целые числа: количество клеток в образце
-  cell_count <- c(1500, 2000, 2500)
-  print(cell_count)
+```
+# Целые числа: количество клеток в образце
+cell_count <- c(1500, 2000, 2500)
+print(cell_count)
 
-  # Дробные числа: концентрация глюкозы в крови (ммоль/л)
-  glucose_level <- c(5.3, 6.1, 4.9)
-  print(glucose_level)
-  ```
+# Дробные числа: концентрация глюкозы в крови (ммоль/л)
+glucose_level <- c(5.3, 6.1, 4.9)
+print(glucose_level)
+```
 
 - **Python:**
-  ```python
-  # Целые числа: количество клеток в образце
-  cell_count = [1500, 2000, 2500]
-  print(cell_count)
+```
+# Целые числа: количество клеток в образце
+cell_count = [1500, 2000, 2500]
+print(cell_count)
 
-  # Дробные числа: концентрация глюкозы в крови (ммоль/л)
-  glucose_level = [5.3, 6.1, 4.9]
-  print(glucose_level)
-  ```
+# Дробные числа: концентрация глюкозы в крови (ммоль/л)
+glucose_level = [5.3, 6.1, 4.9]
+print(glucose_level)
+```
 
 
 ###  Текстовые данные (String/Text)
@@ -47,26 +47,26 @@
 
 #### Примеры:
 - **R:**
-  ```r
-  # Текстовые данные: имена пациентов
-  patient_names <- c("Иванов Иван", "Петрова Мария")
-  print(patient_names)
+```
+# Текстовые данные: имена пациентов
+patient_names <- c("Иванов Иван", "Петрова Мария")
+print(patient_names)
 
-  # Текстовые данные: диагнозы
-  diagnoses <- c("Сахарный диабет", "Артериальная гипертензия")
-  print(diagnoses)
-  ```
+# Текстовые данные: диагнозы
+diagnoses <- c("Сахарный диабет", "Артериальная гипертензия")
+print(diagnoses)
+```
 
 - **Python:**
-  ```python
-  # Текстовые данные: имена пациентов
-  patient_names = ["Иванов Иван", "Петрова Мария"]
-  print(patient_names)
+```
+# Текстовые данные: имена пациентов
+patient_names = ["Иванов Иван", "Петрова Мария"]
+print(patient_names)
 
-  # Текстовые данные: диагнозы
-  diagnoses = ["Сахарный диабет", "Артериальная гипертензия"]
-  print(diagnoses)
-  ```
+# Текстовые данные: диагнозы
+diagnoses = ["Сахарный диабет", "Артериальная гипертензия"]
+print(diagnoses)
+```
 
 
 ### Логические данные (Boolean)
@@ -77,26 +77,26 @@
 
 #### Примеры:
 - **R:**
-  ```r
-  # Логические данные: наличие заболевания
-  has_disease <- c(TRUE, FALSE, TRUE)
-  print(has_disease)
+```
+# Логические данные: наличие заболевания
+has_disease <- c(TRUE, FALSE, TRUE)
+print(has_disease)
 
-  # Логические данные: результат теста
-  test_result <- c(TRUE, FALSE)
-  print(test_result)
-  ```
+# Логические данные: результат теста
+test_result <- c(TRUE, FALSE)
+print(test_result)
+```
 
 - **Python:**
-  ```python
-  # Логические данные: наличие заболевания
-  has_disease = [True, False, True]
-  print(has_disease)
+```
+# Логические данные: наличие заболевания
+has_disease = [True, False, True]
+print(has_disease)
 
-  # Логические данные: результат теста
-  test_result = [True, False]
-  print(test_result)
-  ```
+# Логические данные: результат теста
+test_result = [True, False]
+print(test_result)
+```
 
 
 ### Дата и время (Date/Time)
@@ -108,28 +108,28 @@
 
 #### Примеры:
 - **R:**
-  ```r
-  # Дата: дата рождения пациента
-  birth_date <- as.Date("1990-05-15")
-  print(birth_date)
+```
+# Дата: дата рождения пациента
+birth_date <- as.Date("1990-05-15")
+print(birth_date)
 
-  # Время: время забора крови
-  blood_time <- strptime("14:30:00", format = "%H:%M:%S")
-  print(blood_time)
-  ```
+# Время: время забора крови
+blood_time <- strptime("14:30:00", format = "%H:%M:%S")
+print(blood_time)
+```
 
 - **Python:**
-  ```python
-  from datetime import datetime
+```
+from datetime import datetime
 
-  # Дата: дата рождения пациента
-  birth_date = datetime.strptime("1990-05-15", "%Y-%m-%d")
-  print(birth_date)
+# Дата: дата рождения пациента
+birth_date = datetime.strptime("1990-05-15", "%Y-%m-%d")
+print(birth_date)
 
-  # Время: время забора крови
-  blood_time = datetime.strptime("14:30:00", "%H:%M:%S")
-  print(blood_time)
-  ```
+# Время: время забора крови
+blood_time = datetime.strptime("14:30:00", "%H:%M:%S")
+print(blood_time)
+```
 
 
 ### Категориальные данные (Categorical)
@@ -143,32 +143,32 @@
 
 #### Примеры:
 - **R:**
-  ```r
-  # Категориальные данные: типы клеток
-  cell_types <- factor(c("эритроциты", "лейкоциты"))
-  print(cell_types)
+```
+# Категориальные данные: типы клеток
+cell_types <- factor(c("эритроциты", "лейкоциты"))
+print(cell_types)
 
-  # Категориальные данные: стадии заболевания
-  disease_stages <- factor(c("I", "II", "III"), ordered = TRUE)
-  print(disease_stages)
-  ```
+# Категориальные данные: стадии заболевания
+disease_stages <- factor(c("I", "II", "III"), ordered = TRUE)
+print(disease_stages)
+```
 
 - **Python:**
-  ```python
-  import pandas as pd
+```
+import pandas as pd
 
-  # Категориальные данные: типы клеток
-  cell_types = pd.Categorical(["эритроциты", "лейкоциты"])
-  print(cell_types)
+# Категориальные данные: типы клеток
+cell_types = pd.Categorical(["эритроциты", "лейкоциты"])
+print(cell_types)
 
-  # Категориальные данные: стадии заболевания
-  disease_stages = pd.Categorical(
-      ["I", "II", "III"],
-      categories=["I", "II", "III"],
-      ordered=True
-  )
-  print(disease_stages)
-  ```
+# Категориальные данные: стадии заболевания
+disease_stages = pd.Categorical(
+    ["I", "II", "III"],
+    categories=["I", "II", "III"],
+    ordered=True
+)
+print(disease_stages)
+```
 
 ### Заключение
 

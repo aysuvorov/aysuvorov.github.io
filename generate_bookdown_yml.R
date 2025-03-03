@@ -1,7 +1,6 @@
 # List all .Rmd files in the project (excluding index.Rmd)
 rmd_files <- list.files(pattern = "\\.Rmd$", recursive = TRUE)
-rmd_files = c("index.Rmd", rmd_files)
-# rmd_files <- rmd_files[rmd_files != "index.Rmd"]  # Exclude index.Rmd
+rmd_files <- rmd_files[rmd_files != "my-book.Rmd"]  # Exclude index.Rmd
 
 # Create the content for _bookdown.yml
 yml_content <- c(
