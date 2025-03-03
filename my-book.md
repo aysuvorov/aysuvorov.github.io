@@ -1,3 +1,115 @@
+# Introduction {#intro}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+
+```r
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+<div class="figure" style="text-align: center">
+<img src="01-intro_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
+<p class="caption">(\#fig:nice-fig)Here is a nice figure!</p>
+</div>
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+
+```r
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+
+
+Table: (\#tab:nice-tab)Here is a nice table!
+
+| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+|------------:|-----------:|------------:|-----------:|:-------|
+|          5.1|         3.5|          1.4|         0.2|setosa  |
+|          4.9|         3.0|          1.4|         0.2|setosa  |
+|          4.7|         3.2|          1.3|         0.2|setosa  |
+|          4.6|         3.1|          1.5|         0.2|setosa  |
+|          5.0|         3.6|          1.4|         0.2|setosa  |
+|          5.4|         3.9|          1.7|         0.4|setosa  |
+|          4.6|         3.4|          1.4|         0.3|setosa  |
+|          5.0|         3.4|          1.5|         0.2|setosa  |
+|          4.4|         2.9|          1.4|         0.2|setosa  |
+|          4.9|         3.1|          1.5|         0.1|setosa  |
+|          5.4|         3.7|          1.5|         0.2|setosa  |
+|          4.8|         3.4|          1.6|         0.2|setosa  |
+|          4.8|         3.0|          1.4|         0.1|setosa  |
+|          4.3|         3.0|          1.1|         0.1|setosa  |
+|          5.8|         4.0|          1.2|         0.2|setosa  |
+|          5.7|         4.4|          1.5|         0.4|setosa  |
+|          5.4|         3.9|          1.3|         0.4|setosa  |
+|          5.1|         3.5|          1.4|         0.3|setosa  |
+|          5.7|         3.8|          1.7|         0.3|setosa  |
+|          5.1|         3.8|          1.5|         0.3|setosa  |
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Literature
+
+Here is a review of existing methods.
+
+<!--chapter:end:02-literature.Rmd-->
+
+# Methods
+
+We describe our methods in this chapter.
+
+Math can be added in body using usual syntax like this 
+
+## math example
+
+$p$ is unknown but expected to be around 1/3. Standard error will be approximated
+
+$$
+SE = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+$$
+
+You can also use math in footnotes like this^[where we mention $p = \frac{a}{b}$].
+
+We will approximate standard error to 0.027[^longnote]
+
+[^longnote]: $p$ is unknown but expected to be around 1/3. Standard error will be approximated
+
+    $$
+    SE = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+    $$
+
+<!--chapter:end:03-method.Rmd-->
+
+# Applications
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Example two
+
+<!--chapter:end:04-application.Rmd-->
+
+# Final Words
+
+We have finished a nice book.
+
+<!--chapter:end:05-summary.Rmd-->
+
+
+# References {-}
+
+
+<!--chapter:end:06-references.Rmd-->
+
 # Среднее значение
 
 **Среднее значение** — это величина, представляющая "центральную тенденцию" набора чисел и находящаяся между крайними значениями этого набора. В математике, особенно в статистике, существует несколько видов **средних** (или "мер центральной тенденции"). Каждый из них пытается обобщить или типизировать данную группу данных, отражая их величину и знак. Выбор наиболее подходящей меры зависит от того, что измеряется, а также от контекста и цели.
@@ -79,21 +191,31 @@ $$
 
 Код на R:
 
-```{r}
+
+```r
 means <- c(50, 60, 70)  # Средние значения
 weights <- c(10, 20, 30)  # Веса (размеры выборок)
 weighted_mean <- sum(means * weights) / sum(weights)
 print(paste("Взвешенное среднее:", weighted_mean))
 ```
 
+```
+## [1] "Взвешенное среднее: 63.3333333333333"
+```
+
 Код на Python:
 
-```{python}
+
+```python
 import numpy as np
 means = np.array([50, 60, 70])  # Средние значения
 weights = np.array([10, 20, 30])  # Веса (размеры выборок)
 weighted_mean = np.sum(means * weights) / np.sum(weights)
 print(f"Взвешенное среднее: {weighted_mean}")
+```
+
+```
+## Взвешенное среднее: 63.333333333333336
 ```
 
 ## Усечённое среднее: методы вычисления и примеры применения
@@ -150,7 +272,7 @@ $$
 
 ### Код на R
 В R усечённое среднее можно вычислить с помощью функции `mean()` с параметром `trim`:
-
+```R
 data <- c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
 alpha <- 0.2
 trimmed_mean <- mean(data, trim = alpha)
@@ -168,3 +290,22 @@ data = np.array([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
 alpha = 0.2
 trimmed_mean = trim_mean(data, proportiontocut=alpha)
 print(f"Усечённое среднее: {trimmed_mean}")
+
+<!--chapter:end:07-Mean_value.Rmd-->
+
+# Типы данных в таблицах
+
+Таблицы555 — это один из самых распространенных способов организации и хранения данных. Они используются в базах данных, электронных таблицах (например, Excel или Google Sheets), а также в аналитических инструментах. Каждый столбец таблицы обычно содержит данные определенного типа, что позволяет эффективно обрабатывать и анализировать информацию. В этой статье мы рассмотрим основные типы данных, которые могут встречаться в таблицах.
+
+
+
+
+
+```r
+print(76)
+```
+
+[1] 76
+
+<!--chapter:end:08-data-wrangling.Rmd-->
+

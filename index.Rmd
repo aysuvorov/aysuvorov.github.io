@@ -1,9 +1,14 @@
 --- 
 title: "Анализ данных в биомедицинских исследованиях"
-author: "`r ifelse(knitr::is_latex_output(), 'Суворов Александр Юрьевич', 'Вергун Мария Андреевна'"
+author: |
+  `r ifelse(knitr::is_latex_output(), 
+  "Суворов Александр Юрьевич\\\\Вергун Мария Андреевна", 
+  "Суворов Александр Юрьевич<br>Вергун Мария Андреевна")`
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output:
+  bookdown::gitbook:
+    css: style.css # Include a custom CSS file for font settings
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -14,6 +19,13 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
+
+<!-- bookdown::render_book(output_dir = './docs', clean = TRUE) -->
+<!-- ```{r include=FALSE}
+source("generate_bookdown_yml.R")
+
+
+``` -->
 
 # Prerequisites
 
@@ -37,3 +49,35 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+
+<!-- 
+```{r setup, include=FALSE}
+
+library(readxl)
+library(writexl)
+library(tidyverse)
+library(rstatix)
+library(DescTools)
+library(gtsummary)
+
+library(tidymodels)
+library(survival)
+library(survminer)
+
+library(ggpubr)
+library(kableExtra)
+
+library(mice)
+
+library(pROC)
+
+source("https://raw.githubusercontent.com/aysuvorov/medstats/master/R_scripts/medstats.R")
+
+knitr::opts_chunk$set(
+  echo = FALSE,      # Hide code by default
+  warning = FALSE,   # Suppress warnings
+  message = FALSE    # Suppress messages
+)
+
+``` -->

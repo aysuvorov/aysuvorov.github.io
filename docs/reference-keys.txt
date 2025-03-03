@@ -1,6 +1,5 @@
 fig:nice-fig
 tab:nice-tab
-prerequisites
 intro
 literature
 methods
@@ -25,3 +24,4 @@ final-words
 шаги-вычисления
 реализация-на-r-и-python
 код-на-r
+типы-данных-в-таблицах
