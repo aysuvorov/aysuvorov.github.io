@@ -51,7 +51,6 @@ knitr::write_bib(c(
 ```
 
 
-<!-- 
 ```{r setup, include=FALSE}
 
 library(readxl)
@@ -79,5 +78,4 @@ knitr::opts_chunk$set(
   warning = FALSE,   # Suppress warnings
   message = FALSE    # Suppress messages
 )
-
-``` -->
+```
