@@ -301,17 +301,17 @@ div.csl-indent {
 <p>В первом примере веса представляют вероятности, а во втором — размеры выборок. В зависимости от контекста, веса могут быть интерпретированы по-разному.</p>
 <p>Реализация на R и Python</p>
 <p>Код на R:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="среднее-значение.html#cb6-1" tabindex="-1"></a>means <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>)  <span class="co"># Средние значения</span></span>
-<span id="cb6-2"><a href="среднее-значение.html#cb6-2" tabindex="-1"></a>weights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)  <span class="co"># Веса (размеры выборок)</span></span>
-<span id="cb6-3"><a href="среднее-значение.html#cb6-3" tabindex="-1"></a>weighted_mean <span class="ot">&lt;-</span> <span class="fu">sum</span>(means <span class="sc">*</span> weights) <span class="sc">/</span> <span class="fu">sum</span>(weights)</span>
-<span id="cb6-4"><a href="среднее-значение.html#cb6-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Взвешенное среднее:&quot;</span>, weighted_mean))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="среднее-значение.html#cb5-1" tabindex="-1"></a>means <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>)  <span class="co"># Средние значения</span></span>
+<span id="cb5-2"><a href="среднее-значение.html#cb5-2" tabindex="-1"></a>weights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)  <span class="co"># Веса (размеры выборок)</span></span>
+<span id="cb5-3"><a href="среднее-значение.html#cb5-3" tabindex="-1"></a>weighted_mean <span class="ot">&lt;-</span> <span class="fu">sum</span>(means <span class="sc">*</span> weights) <span class="sc">/</span> <span class="fu">sum</span>(weights)</span>
+<span id="cb5-4"><a href="среднее-значение.html#cb5-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Взвешенное среднее:&quot;</span>, weighted_mean))</span></code></pre></div>
 <pre><code>## [1] &quot;Взвешенное среднее: 63.3333333333333&quot;</code></pre>
 <p>Код на Python:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="среднее-значение.html#cb8-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-2"><a href="среднее-значение.html#cb8-2" tabindex="-1"></a>means <span class="op">=</span> np.array([<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>])  <span class="co"># Средние значения</span></span>
-<span id="cb8-3"><a href="среднее-значение.html#cb8-3" tabindex="-1"></a>weights <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>])  <span class="co"># Веса (размеры выборок)</span></span>
-<span id="cb8-4"><a href="среднее-значение.html#cb8-4" tabindex="-1"></a>weighted_mean <span class="op">=</span> np.<span class="bu">sum</span>(means <span class="op">*</span> weights) <span class="op">/</span> np.<span class="bu">sum</span>(weights)</span>
-<span id="cb8-5"><a href="среднее-значение.html#cb8-5" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Взвешенное среднее: </span><span class="sc">{</span>weighted_mean<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="среднее-значение.html#cb7-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="среднее-значение.html#cb7-2" tabindex="-1"></a>means <span class="op">=</span> np.array([<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>])  <span class="co"># Средние значения</span></span>
+<span id="cb7-3"><a href="среднее-значение.html#cb7-3" tabindex="-1"></a>weights <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>])  <span class="co"># Веса (размеры выборок)</span></span>
+<span id="cb7-4"><a href="среднее-значение.html#cb7-4" tabindex="-1"></a>weighted_mean <span class="op">=</span> np.<span class="bu">sum</span>(means <span class="op">*</span> weights) <span class="op">/</span> np.<span class="bu">sum</span>(weights)</span>
+<span id="cb7-5"><a href="среднее-значение.html#cb7-5" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Взвешенное среднее: </span><span class="sc">{</span>weighted_mean<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <pre><code>## Взвешенное среднее: 63.333333333333336</code></pre>
 </div>
 <div id="усечённое-среднее-методы-вычисления-и-примеры-применения" class="section level2 hasAnchor" number="6.1">

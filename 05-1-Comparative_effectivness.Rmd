@@ -2,6 +2,8 @@
 
 We have finished a nice book.
 
-```{r}
-3+2
-````
+```{r, echo=FALSE}
+library(pROC)
+
+power.roc.test(ncases=41, ncontrols=72, sig.level=0.05, power=0.95)
+```
