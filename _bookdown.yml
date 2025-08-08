@@ -6,6 +6,15 @@ language:
     tab: 'Таблица '
   ui:
     chapter_name: 'Глава '
-rmd_files: ['01-intro.Rmd', '02-literature.Rmd', '03-method.Rmd', '04-application.Rmd', '05-summary.Rmd', '06-references.Rmd', '07-Mean_value.Rmd', '08-data-wrangling.Rmd', 'index.Rmd']
+rmd_files: [
+  '01-intro.Rmd', 
+  '02-literature.Rmd', 
+  '03-method.Rmd', 
+  '04-application.Rmd', 
+  '05-summary.Rmd', 
+  '06-references.Rmd', 
+  '07-Mean_value.Rmd', 
+  '08-data-wrangling.Rmd', 
+  'index.Rmd']
 output_dir: 'docs'
 new_session: no

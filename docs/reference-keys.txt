@@ -1,7 +1,7 @@
 fig:nice-fig
 tab:nice-tab
 intro
-literature-333
+literature
 methods
 math-example
 applications
