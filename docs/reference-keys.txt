@@ -1,8 +1,7 @@
 fig:nice-fig
 tab:nice-tab
-prerequisites
 intro
-literature
+literature-333
 methods
 math-example
 applications

@@ -4,25 +4,25 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Глава 7 Среднее значение | Анализ данных в биомедицинских исследованиях</title>
+  <title>Глава 6 Среднее значение | Анализ данных в биомедицинских исследованиях</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Глава 7 Среднее значение | Анализ данных в биомедицинских исследованиях" />
+  <meta property="og:title" content="Глава 6 Среднее значение | Анализ данных в биомедицинских исследованиях" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Глава 7 Среднее значение | Анализ данных в биомедицинских исследованиях" />
+  <meta name="twitter:title" content="Глава 6 Среднее значение | Анализ данных в биомедицинских исследованиях" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
 
 
-<meta name="date" content="2025-03-04" />
+<meta name="date" content="2025-08-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -127,7 +127,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -162,61 +161,60 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction11</a></li>
+<li class="chapter" data-level="2" data-path="literature-333.html"><a href="literature-333.html"><i class="fa fa-check"></i><b>2</b> Literature 333</a></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>4.1</b> math example</a></li>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>3.1</b> math example</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="7" data-path="среднее-значение.html"><a href="среднее-значение.html"><i class="fa fa-check"></i><b>7</b> Среднее значение</a>
+<li class="chapter" data-level="6" data-path="среднее-значение.html"><a href="среднее-значение.html"><i class="fa fa-check"></i><b>6</b> Среднее значение</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-1-веса-в-виде-вероятностей"><i class="fa fa-check"></i><b>7.0.1</b> Пример 1: Веса в виде вероятностей</a></li>
-<li class="chapter" data-level="7.0.2" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-2-веса-в-виде-чисел-размеры-выборок"><i class="fa fa-check"></i><b>7.0.2</b> Пример 2: Веса в виде чисел (размеры выборок)</a></li>
-<li class="chapter" data-level="7.1" data-path="среднее-значение.html"><a href="среднее-значение.html#усечённое-среднее-методы-вычисления-и-примеры-применения"><i class="fa fa-check"></i><b>7.1</b> Усечённое среднее: методы вычисления и примеры применения</a></li>
-<li class="chapter" data-level="7.2" data-path="среднее-значение.html"><a href="среднее-значение.html#теоретическое-обоснование"><i class="fa fa-check"></i><b>7.2</b> Теоретическое обоснование</a>
+<li class="chapter" data-level="6.0.1" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-1-веса-в-виде-вероятностей"><i class="fa fa-check"></i><b>6.0.1</b> Пример 1: Веса в виде вероятностей</a></li>
+<li class="chapter" data-level="6.0.2" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-2-веса-в-виде-чисел-размеры-выборок"><i class="fa fa-check"></i><b>6.0.2</b> Пример 2: Веса в виде чисел (размеры выборок)</a></li>
+<li class="chapter" data-level="6.1" data-path="среднее-значение.html"><a href="среднее-значение.html#усечённое-среднее-методы-вычисления-и-примеры-применения"><i class="fa fa-check"></i><b>6.1</b> Усечённое среднее: методы вычисления и примеры применения</a></li>
+<li class="chapter" data-level="6.2" data-path="среднее-значение.html"><a href="среднее-значение.html#теоретическое-обоснование"><i class="fa fa-check"></i><b>6.2</b> Теоретическое обоснование</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="среднее-значение.html"><a href="среднее-значение.html#преимущества-усечённого-среднего"><i class="fa fa-check"></i><b>7.2.1</b> Преимущества усечённого среднего</a></li>
-<li class="chapter" data-level="7.2.2" data-path="среднее-значение.html"><a href="среднее-значение.html#недостатки-усечённого-среднего"><i class="fa fa-check"></i><b>7.2.2</b> Недостатки усечённого среднего</a></li>
-<li class="chapter" data-level="7.2.3" data-path="среднее-значение.html"><a href="среднее-значение.html#выбор-параметра-alpha"><i class="fa fa-check"></i><b>7.2.3</b> Выбор параметра <span class="math inline">\(\alpha\)</span></a></li>
+<li class="chapter" data-level="6.2.1" data-path="среднее-значение.html"><a href="среднее-значение.html#преимущества-усечённого-среднего"><i class="fa fa-check"></i><b>6.2.1</b> Преимущества усечённого среднего</a></li>
+<li class="chapter" data-level="6.2.2" data-path="среднее-значение.html"><a href="среднее-значение.html#недостатки-усечённого-среднего"><i class="fa fa-check"></i><b>6.2.2</b> Недостатки усечённого среднего</a></li>
+<li class="chapter" data-level="6.2.3" data-path="среднее-значение.html"><a href="среднее-значение.html#выбор-параметра-alpha"><i class="fa fa-check"></i><b>6.2.3</b> Выбор параметра <span class="math inline">\(\alpha\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-вычисления-усечённого-среднего"><i class="fa fa-check"></i><b>7.3</b> Пример вычисления усечённого среднего</a>
+<li class="chapter" data-level="6.3" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-вычисления-усечённого-среднего"><i class="fa fa-check"></i><b>6.3</b> Пример вычисления усечённого среднего</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-данных"><i class="fa fa-check"></i><b>7.3.1</b> Пример данных</a></li>
-<li class="chapter" data-level="7.3.2" data-path="среднее-значение.html"><a href="среднее-значение.html#шаги-вычисления"><i class="fa fa-check"></i><b>7.3.2</b> Шаги вычисления</a></li>
+<li class="chapter" data-level="6.3.1" data-path="среднее-значение.html"><a href="среднее-значение.html#пример-данных"><i class="fa fa-check"></i><b>6.3.1</b> Пример данных</a></li>
+<li class="chapter" data-level="6.3.2" data-path="среднее-значение.html"><a href="среднее-значение.html#шаги-вычисления"><i class="fa fa-check"></i><b>6.3.2</b> Шаги вычисления</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="среднее-значение.html"><a href="среднее-значение.html#реализация-на-r-и-python"><i class="fa fa-check"></i><b>7.4</b> Реализация на R и Python</a>
+<li class="chapter" data-level="6.4" data-path="среднее-значение.html"><a href="среднее-значение.html#реализация-на-r-и-python"><i class="fa fa-check"></i><b>6.4</b> Реализация на R и Python</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="среднее-значение.html"><a href="среднее-значение.html#код-на-r"><i class="fa fa-check"></i><b>7.4.1</b> Код на R</a></li>
+<li class="chapter" data-level="6.4.1" data-path="среднее-значение.html"><a href="среднее-значение.html#код-на-r"><i class="fa fa-check"></i><b>6.4.1</b> Код на R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html"><i class="fa fa-check"></i><b>8</b> Типы данных в таблицах</a>
+<li class="chapter" data-level="7" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html"><i class="fa fa-check"></i><b>7</b> Типы данных в таблицах</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#числовые-данные-numeric"><i class="fa fa-check"></i><b>8.0.1</b> Числовые данные (Numeric)</a></li>
-<li class="chapter" data-level="8.0.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#текстовые-данные-stringtext"><i class="fa fa-check"></i><b>8.0.2</b> Текстовые данные (String/Text)</a></li>
-<li class="chapter" data-level="8.0.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#логические-данные-boolean"><i class="fa fa-check"></i><b>8.0.3</b> Логические данные (Boolean)</a></li>
-<li class="chapter" data-level="8.0.4" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#дата-и-время-datetime"><i class="fa fa-check"></i><b>8.0.4</b> Дата и время (Date/Time)</a></li>
-<li class="chapter" data-level="8.0.5" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#категориальные-данные-categorical"><i class="fa fa-check"></i><b>8.0.5</b> Категориальные данные (Categorical)</a></li>
-<li class="chapter" data-level="8.0.6" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#заключение"><i class="fa fa-check"></i><b>8.0.6</b> Заключение</a></li>
-<li class="chapter" data-level="8.0.7" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#исходы-и-конечные-точки-в-медицине-и-биологии"><i class="fa fa-check"></i><b>8.0.7</b> Исходы и конечные точки в медицине и биологии</a></li>
-<li class="chapter" data-level="8.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-исходы"><i class="fa fa-check"></i><b>8.1</b> Что такое исходы?</a></li>
-<li class="chapter" data-level="8.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-конечные-точки-и-чем-они-отличаются-от-исходов"><i class="fa fa-check"></i><b>8.2</b> Что такое конечные точки и чем они отличаются от исходов?</a></li>
-<li class="chapter" data-level="8.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#какие-бывают-конечные-точки"><i class="fa fa-check"></i><b>8.3</b> Какие бывают конечные точки?</a>
+<li class="chapter" data-level="7.0.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#числовые-данные-numeric"><i class="fa fa-check"></i><b>7.0.1</b> Числовые данные (Numeric)</a></li>
+<li class="chapter" data-level="7.0.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#текстовые-данные-stringtext"><i class="fa fa-check"></i><b>7.0.2</b> Текстовые данные (String/Text)</a></li>
+<li class="chapter" data-level="7.0.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#логические-данные-boolean"><i class="fa fa-check"></i><b>7.0.3</b> Логические данные (Boolean)</a></li>
+<li class="chapter" data-level="7.0.4" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#дата-и-время-datetime"><i class="fa fa-check"></i><b>7.0.4</b> Дата и время (Date/Time)</a></li>
+<li class="chapter" data-level="7.0.5" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#категориальные-данные-categorical"><i class="fa fa-check"></i><b>7.0.5</b> Категориальные данные (Categorical)</a></li>
+<li class="chapter" data-level="7.0.6" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#заключение"><i class="fa fa-check"></i><b>7.0.6</b> Заключение</a></li>
+<li class="chapter" data-level="7.0.7" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#исходы-и-конечные-точки-в-медицине-и-биологии"><i class="fa fa-check"></i><b>7.0.7</b> Исходы и конечные точки в медицине и биологии</a></li>
+<li class="chapter" data-level="7.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-исходы"><i class="fa fa-check"></i><b>7.1</b> Что такое исходы?</a></li>
+<li class="chapter" data-level="7.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-конечные-точки-и-чем-они-отличаются-от-исходов"><i class="fa fa-check"></i><b>7.2</b> Что такое конечные точки и чем они отличаются от исходов?</a></li>
+<li class="chapter" data-level="7.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#какие-бывают-конечные-точки"><i class="fa fa-check"></i><b>7.3</b> Какие бывают конечные точки?</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#по-значимости"><i class="fa fa-check"></i><b>8.3.1</b> По значимости:</a></li>
-<li class="chapter" data-level="8.3.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#мягкие-и-жесткие-конечные-точки"><i class="fa fa-check"></i><b>8.3.2</b> Мягкие и жесткие конечные точки</a></li>
-<li class="chapter" data-level="8.3.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#комбинированные-конечные-точки"><i class="fa fa-check"></i><b>8.3.3</b> Комбинированные конечные точки</a></li>
+<li class="chapter" data-level="7.3.1" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#по-значимости"><i class="fa fa-check"></i><b>7.3.1</b> По значимости:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#мягкие-и-жесткие-конечные-точки"><i class="fa fa-check"></i><b>7.3.2</b> Мягкие и жесткие конечные точки</a></li>
+<li class="chapter" data-level="7.3.3" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#комбинированные-конечные-точки"><i class="fa fa-check"></i><b>7.3.3</b> Комбинированные конечные точки</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-первичный-критерий-безопасности-и-эффективности-в-интервенционных-исследованиях"><i class="fa fa-check"></i><b>8.4</b> Что такое первичный критерий безопасности и эффективности в интервенционных исследованиях?</a></li>
-<li class="chapter" data-level="8.5" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#какие-исходы-бывают-в-диагностических-исследованиях"><i class="fa fa-check"></i><b>8.5</b> Какие исходы бывают в диагностических исследованиях?</a></li>
-<li class="chapter" data-level="8.6" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#заключение-1"><i class="fa fa-check"></i><b>8.6</b> <strong>Заключение</strong></a></li>
+<li class="chapter" data-level="7.4" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#что-такое-первичный-критерий-безопасности-и-эффективности-в-интервенционных-исследованиях"><i class="fa fa-check"></i><b>7.4</b> Что такое первичный критерий безопасности и эффективности в интервенционных исследованиях?</a></li>
+<li class="chapter" data-level="7.5" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#какие-исходы-бывают-в-диагностических-исследованиях"><i class="fa fa-check"></i><b>7.5</b> Какие исходы бывают в диагностических исследованиях?</a></li>
+<li class="chapter" data-level="7.6" data-path="типы-данных-в-таблицах.html"><a href="типы-данных-в-таблицах.html#заключение-1"><i class="fa fa-check"></i><b>7.6</b> <strong>Заключение</strong></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -238,11 +236,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="среднее-значение" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Глава 7</span> Среднее значение<a href="среднее-значение.html#среднее-значение" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="среднее-значение" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Глава 6</span> Среднее значение<a href="среднее-значение.html#среднее-значение" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Среднее значение</strong> — это величина, представляющая “центральную тенденцию” набора чисел и находящаяся между крайними значениями этого набора. В математике, особенно в статистике, существует несколько видов <strong>средних</strong> (или “мер центральной тенденции”). Каждый из них пытается обобщить или типизировать данную группу данных, отражая их величину и знак. Выбор наиболее подходящей меры зависит от того, что измеряется, а также от контекста и цели.</p>
-<div id="арифметическое-среднее" class="section level4 hasAnchor" number="7.0.0.1">
-<h4><span class="header-section-number">7.0.0.1</span> Арифметическое среднее<a href="среднее-значение.html#арифметическое-среднее" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="арифметическое-среднее" class="section level4 hasAnchor" number="6.0.0.1">
+<h4><span class="header-section-number">6.0.0.1</span> Арифметическое среднее<a href="среднее-значение.html#арифметическое-среднее" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Арифметическое среднее</strong>, также известное как “среднее арифметическое”, вычисляется как сумма значений, деленная на их количество. Арифметическое среднее набора чисел <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> обычно обозначается с помощью черты над переменной, <span class="math inline">\(\bar{x}\)</span>. Если числа получены из выборки, то среднее называется <strong>выборочным средним</strong> (<span class="math inline">\(\bar{x}\)</span>), чтобы отличать его от <strong>среднего генеральной совокупности</strong> (или <strong>математического ожидания</strong>), обозначаемого <span class="math inline">\(\mu\)</span> или <span class="math inline">\(\mu_x\)</span>.</p>
 <p>Арифметическое среднее (или просто среднее) массива чисел — это сумма всех чисел, деленная на их количество. Для выборки <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> среднее обозначается как <span class="math inline">\(\bar{x}\)</span> или <span class="math inline">\(\hat{x}\)</span>:</p>
 <p><span class="math display">\[
@@ -253,8 +251,8 @@ div.csl-indent {
 \frac{4 + 36 + 45 + 50 + 75}{5} = \frac{210}{5} = 42.
 \]</span></p>
 </div>
-<div id="геометрическое-среднее-gm" class="section level4 hasAnchor" number="7.0.0.2">
-<h4><span class="header-section-number">7.0.0.2</span> Геометрическое среднее (GM)<a href="среднее-значение.html#геометрическое-среднее-gm" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="геометрическое-среднее-gm" class="section level4 hasAnchor" number="6.0.0.2">
+<h4><span class="header-section-number">6.0.0.2</span> Геометрическое среднее (GM)<a href="среднее-значение.html#геометрическое-среднее-gm" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Геометрическое среднее полезно для наборов положительных чисел, которые интерпретируются через их произведение (например, темпы роста):</p>
 <p><span class="math display">\[
 \hat{x} = \left(\prod_{i=1}^n{x_i}\right)^\frac{1}{n} = \left(x_1 x_2 \cdots x_n\right)^\frac{1}{n}
@@ -265,8 +263,8 @@ div.csl-indent {
 \]</span></p>
 <p>Средняя геометрическая используется в расчетах средних темпов роста, например, колоний бактерий.</p>
 </div>
-<div id="взвешенное-арифметическое-среднее" class="section level4 hasAnchor" number="7.0.0.3">
-<h4><span class="header-section-number">7.0.0.3</span> Взвешенное арифметическое среднее<a href="среднее-значение.html#взвешенное-арифметическое-среднее" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="взвешенное-арифметическое-среднее" class="section level4 hasAnchor" number="6.0.0.3">
+<h4><span class="header-section-number">6.0.0.3</span> Взвешенное арифметическое среднее<a href="среднее-значение.html#взвешенное-арифметическое-среднее" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Взвешенное арифметическое среднее</strong> используется, если каждое значение имеет неравное влияние в массиве, какие-то значения являются более важными, какие-то - менее:</p>
 <p><span class="math display">\[
 \hat{x} = \frac{\sum_{i=1}^n w_i \bar{x_i}}{\sum_{i=1}^n w_i}
@@ -274,8 +272,8 @@ div.csl-indent {
 <p>где <span class="math inline">\(\hat{x_i}\)</span> и <span class="math inline">\(w_i\)</span> — среднее и размер выборки <span class="math inline">\(i\)</span> соответственно.</p>
 <p>Давайте рассмотрим примеры использования взвешенного арифметического среднего с весами в виде вероятностей и с весами в виде чисел.</p>
 </div>
-<div id="пример-1-веса-в-виде-вероятностей" class="section level3 hasAnchor" number="7.0.1">
-<h3><span class="header-section-number">7.0.1</span> Пример 1: Веса в виде вероятностей<a href="среднее-значение.html#пример-1-веса-в-виде-вероятностей" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="пример-1-веса-в-виде-вероятностей" class="section level3 hasAnchor" number="6.0.1">
+<h3><span class="header-section-number">6.0.1</span> Пример 1: Веса в виде вероятностей<a href="среднее-значение.html#пример-1-веса-в-виде-вероятностей" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Предположим, у нас есть три выборки с средними значениями <span class="math inline">\(\bar{x_1} = 10\)</span>, <span class="math inline">\(\bar{x_2} = 15\)</span>, и <span class="math inline">\(\bar{x_3} = 20\)</span>. Каждая выборка имеет вероятность быть выбранной из общей популяции: <span class="math inline">\(P_1 = 0.4\)</span>, <span class="math inline">\(P_2 = 0.3\)</span>, и <span class="math inline">\(P_3 = 0.3\)</span>. Эти вероятности можно использовать как веса.</p>
 <p><strong>Расчёт:</strong></p>
 <ul>
@@ -286,8 +284,8 @@ div.csl-indent {
 \bar{x} = \frac{0.4 \times 10 + 0.3 \times 15 + 0.3 \times 20}{0.4 + 0.3 + 0.3} = \frac{4 + 4.5 + 6}{1} = \frac{14.5}{1} = 14.5
 \]</span></p>
 </div>
-<div id="пример-2-веса-в-виде-чисел-размеры-выборок" class="section level3 hasAnchor" number="7.0.2">
-<h3><span class="header-section-number">7.0.2</span> Пример 2: Веса в виде чисел (размеры выборок)<a href="среднее-значение.html#пример-2-веса-в-виде-чисел-размеры-выборок" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="пример-2-веса-в-виде-чисел-размеры-выборок" class="section level3 hasAnchor" number="6.0.2">
+<h3><span class="header-section-number">6.0.2</span> Пример 2: Веса в виде чисел (размеры выборок)<a href="среднее-значение.html#пример-2-веса-в-виде-чисел-размеры-выборок" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Предположим, у нас есть три выборки с средними значениями <span class="math inline">\(\hat{x_1} = 10\)</span>, <span class="math inline">\(\hat{x_2} = 15\)</span>, и <span class="math inline">\(\hat{x_3} = 20\)</span>. Размеры этих выборок: <span class="math inline">\(n_1 = 100\)</span>, <span class="math inline">\(n_2 = 50\)</span>, и <span class="math inline">\(n_3 = 50\)</span>. Мы можем использовать размеры выборок как веса.</p>
 <p><strong>Расчёт:</strong></p>
 <ul>
@@ -313,8 +311,8 @@ div.csl-indent {
 <span id="cb6-5"><a href="среднее-значение.html#cb6-5" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Взвешенное среднее: </span><span class="sc">{</span>weighted_mean<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <pre><code>## Взвешенное среднее: 63.333333333333336</code></pre>
 </div>
-<div id="усечённое-среднее-методы-вычисления-и-примеры-применения" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Усечённое среднее: методы вычисления и примеры применения<a href="среднее-значение.html#усечённое-среднее-методы-вычисления-и-примеры-применения" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="усечённое-среднее-методы-вычисления-и-примеры-применения" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Усечённое среднее: методы вычисления и примеры применения<a href="среднее-значение.html#усечённое-среднее-методы-вычисления-и-примеры-применения" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Усечённое среднее (англ. <em>trimmed mean</em>) — это статистический показатель, который используется для уменьшения влияния выбросов на оценку центральной тенденции. Усечённое среднее является устойчивым к выбросам аналогом среднего арифметического. Оно вычисляется путём удаления определённого процента наименьших и наибольших значений из выборки, после чего рассчитывается среднее арифметическое оставшихся данных. Этот метод особенно полезен в ситуациях, когда данные содержат <strong>аномальные значения</strong>, которые могут исказить результаты анализа.</p>
 <p>Формально усечённое среднее определяется следующим образом:</p>
 <ol style="list-style-type: decimal">
@@ -327,37 +325,37 @@ div.csl-indent {
 \]</span></p>
 <hr />
 </div>
-<div id="теоретическое-обоснование" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> Теоретическое обоснование<a href="среднее-значение.html#теоретическое-обоснование" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="преимущества-усечённого-среднего" class="section level3 hasAnchor" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Преимущества усечённого среднего<a href="среднее-значение.html#преимущества-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="теоретическое-обоснование" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Теоретическое обоснование<a href="среднее-значение.html#теоретическое-обоснование" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="преимущества-усечённого-среднего" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Преимущества усечённого среднего<a href="среднее-значение.html#преимущества-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><strong>Устойчивость к выбросам</strong>: Удаление крайних значений делает усечённое среднее менее чувствительным к аномалиям.</li>
 <li><strong>Баланс между устойчивостью и эффективностью</strong>: В отличие от медианы, усечённое среднее использует больше информации из данных, сохраняя при этом устойчивость.</li>
 </ol>
 </div>
-<div id="недостатки-усечённого-среднего" class="section level3 hasAnchor" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> Недостатки усечённого среднего<a href="среднее-значение.html#недостатки-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="недостатки-усечённого-среднего" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Недостатки усечённого среднего<a href="среднее-значение.html#недостатки-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><strong>Потеря информации</strong>: Удаление части данных может привести к потере полезной информации.</li>
 <li><strong>Зависимость от выбора <span class="math inline">\(\alpha\)</span></strong>: Результаты зависят от выбора доли удаляемых данных.</li>
 </ol>
 </div>
-<div id="выбор-параметра-alpha" class="section level3 hasAnchor" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> Выбор параметра <span class="math inline">\(\alpha\)</span><a href="среднее-значение.html#выбор-параметра-alpha" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="выбор-параметра-alpha" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Выбор параметра <span class="math inline">\(\alpha\)</span><a href="среднее-значение.html#выбор-параметра-alpha" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Обычно выбирают <span class="math inline">\(\alpha\)</span> в диапазоне от 0.05 до 0.25. Например, при <span class="math inline">\(\alpha = 0.1\)</span> удаляется 10% наименьших и 10% наибольших значений.</p>
 <hr />
 </div>
 </div>
-<div id="пример-вычисления-усечённого-среднего" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Пример вычисления усечённого среднего<a href="среднее-значение.html#пример-вычисления-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="пример-данных" class="section level3 hasAnchor" number="7.3.1">
-<h3><span class="header-section-number">7.3.1</span> Пример данных<a href="среднее-значение.html#пример-данных" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="пример-вычисления-усечённого-среднего" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Пример вычисления усечённого среднего<a href="среднее-значение.html#пример-вычисления-усечённого-среднего" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="пример-данных" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Пример данных<a href="среднее-значение.html#пример-данных" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Рассмотрим выборку из 10 значений:
 <span class="math display">\[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \]</span></p>
 </div>
-<div id="шаги-вычисления" class="section level3 hasAnchor" number="7.3.2">
-<h3><span class="header-section-number">7.3.2</span> Шаги вычисления<a href="среднее-значение.html#шаги-вычисления" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="шаги-вычисления" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Шаги вычисления<a href="среднее-значение.html#шаги-вычисления" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Упорядочим выборку:
 <span class="math display">\[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \]</span></li>
@@ -372,10 +370,10 @@ div.csl-indent {
 <hr />
 </div>
 </div>
-<div id="реализация-на-r-и-python" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Реализация на R и Python<a href="среднее-значение.html#реализация-на-r-и-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="код-на-r" class="section level3 hasAnchor" number="7.4.1">
-<h3><span class="header-section-number">7.4.1</span> Код на R<a href="среднее-значение.html#код-на-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="реализация-на-r-и-python" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Реализация на R и Python<a href="среднее-значение.html#реализация-на-r-и-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="код-на-r" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Код на R<a href="среднее-значение.html#код-на-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>В R усечённое среднее можно вычислить с помощью функции <code>mean()</code> с параметром <code>trim</code>:</p>
 <p>data &lt;- c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
 alpha &lt;- 0.2
