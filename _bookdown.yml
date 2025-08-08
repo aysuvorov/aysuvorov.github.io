@@ -12,6 +12,7 @@ rmd_files: [
   '03-method.Rmd', 
   '04-application.Rmd', 
   '05-summary.Rmd', 
+  '05-1-Comparative_effectivness.Rmd',
   '06-references.Rmd', 
   '07-Mean_value.Rmd', 
   '08-data-wrangling.Rmd', 
