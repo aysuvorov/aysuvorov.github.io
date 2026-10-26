@@ -1,0 +1,97 @@
+# Build the Next.js app as a static site and deploy it to GitHub Pages.
+#
+# Repo layout:
+#   user.github.io            → served at https://user.github.io/         (basePath = "")
+#   any other repo            → served at https://user.github.io/<repo>/  (basePath = "/<repo>")
+#
+# This workflow auto-detects which case applies from `GITHUB_REPOSITORY`
+# (`owner/repo`) and feeds the right `NEXT_PUBLIC_BASE_PATH` into the build,
+# so you don't have to hard-code the repo name anywhere in the source.
+#
+# Setup (one-time, per repo):
+#   1. Push this repo to GitHub.
+#   2. Repo → Settings → Pages → "Build and deployment" → Source = "GitHub Actions".
+#   3. Push to `main` (or trigger manually) — the site goes live on the Pages URL.
+#
+# Notes:
+#   - We pin to Node 24 to match the engines constraint in package.json.
+#   - We install with `npm ci` so the workflow works on GitHub-hosted runners
+#     without Bun. The lockfile shipped with the template (bun.lock) is for
+#     local Bun usage; npm will resolve its own tree from package.json.
+#   - `.nojekyll` lives in `public/` and is copied into `out/` by `next build`,
+#     so Pages won't silently hide the `_next/` folder.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent Pages deployment; don't cancel in-progress runs.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Detect Pages base path
+        id: basepath
+        run: |
+          # GITHUB_REPOSITORY is "owner/repo".
+          REPO="${GITHUB_REPOSITORY#*/}"
+          if [ "$REPO" = "${GITHUB_REPOSITORY%%/*}.github.io" ] || [ "$REPO" = "${GITHUB_ACTOR}.github.io" ]; then
+            echo "base_path=" >> "$GITHUB_OUTPUT"
+            echo "Detected user/org GitHub Pages site → basePath=''"
+          else
+            echo "base_path=/$REPO" >> "$GITHUB_OUTPUT"
+            echo "Detected project page → basePath='/$REPO'"
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.basepath.outputs.base_path }}
+        run: npx next build
+
+      - name: Add .nojekyll (safety net)
+        # `next build` already copies public/.nojekyll → out/.nojekyll, but we
+        # touch it again in case a future Next version changes copy behaviour.
+        run: touch out/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
