@@ -12,7 +12,7 @@
 | `next.config.mjs` | `output: "export"`, `images.unoptimized: true`, динамические `basePath`/`assetPrefix` из env, убран `headers()` (не поддерживается в static export), `trailingSlash: true` |
 | `public/.nojekyll` | Пустой файл, чтобы GitHub Pages не игнорировал `_next/` |
 | `.github/workflows/deploy.yml` | Авто-сборка и деплой на Pages при пуше в `main` |
-| `package.json` | Скрипты `dev`/`build`/`lint`/`typecheck` без изменений — собирается обычным `next build` |
+| `package.json` | Скрипты `dev`/`build`/`lint`/`typecheck` без изменений — собирается обычным `next build`. Менеджер пакетов — Bun (`packageManager: bun@1.3.14`), `bun.lock` входит в репозиторий |
 | `src/app/page.tsx`, `layout.tsx`, компоненты UI | Без изменений — ничего переделывать не нужно, всё уже клиент-side |
 
 Динамическая отрисовка не понадобилась: единственные «динамические» части
@@ -23,16 +23,32 @@
 
 ### Локально
 
+Проект использует **Bun** (версия 1.3.14 указана в `package.json` через
+`packageManager` и в `.node-version` — Node 24). Если Bun не установлен,
+поставьте его одной командой:
+
 ```bash
-npm install
-npm run dev          # http://localhost:3000
+# macOS / Linux / WSL
+curl -fsSL https://bun.sh/install | bash
+# Windows (PowerShell)
+powershell -c "irm bun.sh/install.ps1 | iex"
 ```
+
+Далее:
+
+```bash
+bun install          # установка зависимостей (по bun.lock)
+bun run dev          # http://localhost:3000
+```
+
+Если хотите работать через npm, удалите `bun.lock` и `packageManager` из
+`package.json`, затем `npm install` создаст `package-lock.json`.
 
 ### Локальная сборка статического сайта
 
 ```bash
-npm run build        # создаёт папку out/
-npx serve out        # посмотреть результат локально
+bun run build        # создаёт папку out/
+bunx serve out       # посмотреть результат локально
 ```
 
 Если репозиторий будет лежать не в корне `user.github.io`, а по под-пути
@@ -40,8 +56,8 @@ npx serve out        # посмотреть результат локально
 сходились:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/my-repo npm run build
-npx serve out        # открыть http://localhost:3000/my-repo/
+NEXT_PUBLIC_BASE_PATH=/my-repo bun run build
+bunx serve out       # открыть http://localhost:3000/my-repo/
 ```
 
 ## Деплой на GitHub Pages

@@ -14,10 +14,15 @@
 #   3. Push to `main` (or trigger manually) — the site goes live on the Pages URL.
 #
 # Notes:
-#   - We pin to Node 24 to match the engines constraint in package.json.
-#   - We install with `npm ci` so the workflow works on GitHub-hosted runners
-#     without Bun. The lockfile shipped with the template (bun.lock) is for
-#     local Bun usage; npm will resolve its own tree from package.json.
+#   - The template's package.json declares `packageManager: bun@1.3.14` and
+#     ships `bun.lock`, so we install with Bun in CI too. This keeps the
+#     dependency tree identical to local dev and avoids the "lock file not
+#     found" error from `npm ci` (which needs `package-lock.json`).
+#   - Bun is set up via `oven-sh/setup-bun@v2`, which also caches the global
+#     Bun cache directory between runs.
+#   - Node 24 is installed alongside Bun because `next build` may shell out
+#     to Node for some tooling; matching the `engines.node` constraint in
+#     package.json keeps behaviour predictable.
 #   - `.nojekyll` lives in `public/` and is copied into `out/` by `next build`,
 #     so Pages won't silently hide the `_next/` folder.
 
@@ -50,7 +55,8 @@ jobs:
         run: |
           # GITHUB_REPOSITORY is "owner/repo".
           REPO="${GITHUB_REPOSITORY#*/}"
-          if [ "$REPO" = "${GITHUB_REPOSITORY%%/*}.github.io" ] || [ "$REPO" = "${GITHUB_ACTOR}.github.io" ]; then
+          OWNER="${GITHUB_REPOSITORY%%/*}"
+          if [ "$REPO" = "$OWNER.github.io" ]; then
             echo "base_path=" >> "$GITHUB_OUTPUT"
             echo "Detected user/org GitHub Pages site → basePath=''"
           else
@@ -62,15 +68,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-          cache: "npm"
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.14"
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: bun install --frozen-lockfile
 
       - name: Build static site
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.basepath.outputs.base_path }}
-        run: npx next build
+        run: bun run build
 
       - name: Add .nojekyll (safety net)
         # `next build` already copies public/.nojekyll → out/.nojekyll, but we
