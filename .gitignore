@@ -157,6 +157,3 @@ pages/_studio/
 *.tar.gz
 *.tar.xz
 
-# GitHub Pages static export (also covered by `out` above, kept for clarity)
-/out/
-

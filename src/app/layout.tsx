@@ -1,10 +1,17 @@
 import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { Lora } from "next/font/google";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import site from "./site.json";
 import "./globals.css";
+
+const lora = Lora({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-lora",
+  display: "swap",
+});
 
 // Site metadata lives in site.json so Studio can update it without touching
 // this file. The favicon and social image are separate files Next.js resolves
@@ -28,13 +35,14 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           GeistSans.variable,
-          GeistMono.variable
+          GeistMono.variable,
+          lora.variable
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}

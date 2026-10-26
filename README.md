@@ -1,23 +1,34 @@
-# Giga Studio — шаблон Next.js для GitHub Pages
+# BioStat Pro — лендинг на Next.js для GitHub Pages
 
-Тот же шаблон Next.js 16 + TypeScript + shadcn/ui + Tailwind, но перенастроенный
-под **статический хостинг GitHub Pages**. Никакого Node-сервера не требуется —
+Лендинг биостатистика (BioStat Pro / Александр Суворов), перенастроенный под
+**статический хостинг GitHub Pages**. Никакого Node-сервера не требуется —
 `next build` собирает папку `out/`, которую GitHub Pages раздаёт как обычные
-статические файлы.
+статические файлы. KaTeX-формулы и `next/font` уже отрабатывают на этапе
+сборки (SSG), так что готовый HTML содержит уже отрендеренную разметку.
 
 ## Что изменилось по сравнению с исходным шаблоном
 
 | Файл | Изменение |
 |------|-----------|
-| `next.config.mjs` | `output: "export"`, `images.unoptimized: true`, динамические `basePath`/`assetPrefix` из env, убран `headers()` (не поддерживается в static export), `trailingSlash: true` |
+| `next.config.mjs` | `output: "export"`, `images.unoptimized: true`, динамические `basePath`/`assetPrefix` из env, убран `headers()` (CSP) — не поддерживается в static export, `trailingSlash: true` |
 | `public/.nojekyll` | Пустой файл, чтобы GitHub Pages не игнорировал `_next/` |
-| `.github/workflows/deploy.yml` | Авто-сборка и деплой на Pages при пуше в `main` |
-| `package.json` | Скрипты `dev`/`build`/`lint`/`typecheck` без изменений — собирается обычным `next build`. Менеджер пакетов — Bun (`packageManager: bun@1.3.14`), `bun.lock` входит в репозиторий |
-| `src/app/page.tsx`, `layout.tsx`, компоненты UI | Без изменений — ничего переделывать не нужно, всё уже клиент-side |
+| `.github/workflows/deploy.yml` | Авто-сборка и деплой на Pages при пуше в `main`. Установка через Bun (под `bun.lock`), basePath определяется автоматически по имени репозитория |
+| `src/app/page.tsx`, секции, `math-formula.tsx`, `copy-email-button.tsx` | Без изменений — всё, что было «динамическим», работает на клиенте или на этапе сборки |
 
-Динамическая отрисовка не понадобилась: единственные «динамические» части
-шаблона (`next-themes` переключение темы, шрифты `geist` через `next/font`,
-компонент `next/image`) полностью работают в static export.
+Динамическая отрисовка не понадобилась:
+
+- `MathFormula` рендерит TeX через `katex.renderToString` при сборке — это
+  статическая генерация (SSG), а не SSR. Результат попадает в HTML как
+  готовая разметка.
+- `next/font/google` (Geist Sans/Mono + Lora с кириллицей) скачивает шрифты
+  во время `next build` и инлайнит их в CSS — в рантайме сетевых запросов
+  к Google Fonts нет.
+- `next/image` для `/logo.svg` и `/avatar.jpg` работает в режиме
+  `unoptimized: true` — картинки отдаются «как есть», но basePath
+  подставляется автоматически.
+- `CopyEmailButton` — клиентский компонент, `navigator.clipboard` работает
+  на любой статике.
+- `next-themes` переключатель темы — полностью клиентский.
 
 ## Быстрый старт
 
@@ -96,6 +107,46 @@ GitHub Actions уже это делает автоматически.
 - **Нет middleware и Server Actions** — только клиентские взаимодействия.
 - **404 на свежем деплое** — Pages иногда кэширует редиректы; подождите
   минуту или сделайте hard refresh (Ctrl+Shift+R).
+- **CSP для iframe-встраивания** — исходный шаблон выставлял
+  `frame-ancestors *;` через `headers()`, что недоступно в static export.
+  Если сайт нужно встраивать в iframe, добавьте
+  `<meta http-equiv="Content-Security-Policy" content="frame-ancestors *;">`
+  в `src/app/layout.tsx`.
+
+## Структура
+
+```
+src/
+  app/                     # App Router (одна страница-лендинг)
+    layout.tsx             # шрифты, ThemeProvider, метаданные
+    page.tsx               # композиция секций
+    globals.css            # тема (light/dark), утилиты .bg-grid
+    site.json              # title / description / url
+  components/
+    hero-section.tsx       # первая секция: SVG-кривые дожития, KaTeX-формула
+    research-services-section.tsx
+    clinical-research-section.tsx
+    ai-modeling-section.tsx
+    process-section.tsx
+    about-section.tsx      # CV, опыт, гранты, фото
+    contact-section.tsx
+    site-header.tsx        # sticky-навигация
+    site-footer.tsx
+    math-formula.tsx       # KaTeX рендер на этапе сборки
+    survival-chart.tsx     # декоративные SVG S(t) и h(t)
+    copy-email-button.tsx  # клиентский copy-to-clipboard
+    brand-mark.tsx
+    ui/                    # shadcn/ui (new-york)
+  lib/
+    utils.ts               # cn()
+    contacts.ts            # email, Telegram, ORCID, WoS, Scopus
+public/
+  logo.svg
+  avatar.jpg
+  .nojekyll                # чтобы GitHub Pages не прятал _next/
+.github/workflows/
+  deploy.yml               # авто-деплой на Pages (Bun + next build)
+```
 
 ## Стек
 
@@ -103,5 +154,6 @@ GitHub Actions уже это делает автоматически.
 - React 19
 - TypeScript 5
 - Tailwind CSS 3 + shadcn/ui (new-york)
-- next-themes (тёмная/светлая тема)
-- Geist Sans / Mono (через `next/font`)
+- next-themes (тёмная/светлая тема, по умолчанию светлая)
+- KaTeX 0.19 (рендер TeX при сборке)
+- Geist Sans / Mono + Lora (через `next/font/google`, кириллица включена)
